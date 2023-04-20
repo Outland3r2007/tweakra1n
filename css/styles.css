@@ -1,4 +1,28 @@
-
+:root {
+  --f7-ios-primary: #3E84F6;
+  --f7-ios-primary-shade: #3E84F6;
+  --f7-ios-primary-tint: #3E84F6;
+}
+.ios {
+  --f7-theme-color: var(--f7-ios-primary);
+  --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
+  --f7-theme-color-shade: var(--f7-ios-primary-shade);
+  --f7-theme-color-tint: var(--f7-ios-primary-tint);
+}
+.md {
+  --f7-theme-color: var(--f7-ios-primary);
+  --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
+  --f7-theme-color-shade: var(--f7-ios-primary-shade);
+  --f7-theme-color-tint: var(--f7-ios-primary-tint);
+}
+.ios .color-primary,
+.ios.color-primary {
+  --f7-theme-color: var(--f7-ios-primary);
+  --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
+  --f7-theme-color-shade: var(--f7-ios-primary-shade);
+  --f7-theme-color-tint: var(--f7-ios-primary-tint);
+}
+      
       .slider{
         display: flex;
         overflow-x: auto;
@@ -12,21 +36,6 @@
       .slider img{
       width:70px;
       border-radius:15px;
-      margin:5px;
-      }
-      .screenshot{
-        display:flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling:touch;
-      }
-      .screenshot div{
-        flex-shrink:0;
-        width:250px;
-        height:515px;
-      }
-      .screenshot img{
-      width:230px;
-      border-radius:20px;
       margin:5px;
       }      
       .popup{
@@ -88,14 +97,27 @@
       background-color: #3E84F6; width: 60px; height: 28px; border-radius: 30px; text-align: center; line-height: 27.5px; font-weight: bold; font-size: 1.17em; box-sizing: border-box; color: white; display: inline-block; vertical-align: text-bottom; margin-top: 8px; margin-bottom: 5px;
       }
       .bg{
-      height:auto;
-      } 
-      .toolbar-bottom{
-      border-top-left-radius:30px;
-      border-top-right-radius:30px;
+      height:fixed;
       }
       .tab-link-highlight{
       width: 27%;
       transform: translate3d(0%, 0px, 0px);
       }
-      
+      .swiper {
+      width: 90%;
+      height: 50%;
+      border-radius:20px;
+    }
+    .swiper-slide {
+      border-radius:20px;
+    }
+    .swiper-slide img {      
+      width: 100%;
+      height: 100%;    
+      border-radius:20px;
+    }
+      .toolbar-bottom{
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+     }
+    
