@@ -42,6 +42,7 @@ var app = new Framework7({
         closeOnEscape: true,
          swipeToClose: true,
          closeByBackdropClick: true,
+         push: true,
     },
     sheet: {
         closeOnEscape: true,
@@ -52,7 +53,10 @@ var app = new Framework7({
     actions: {
         closeOnEscape: true,
     },
-    // Register service worker
+    card: {
+    hideNavbarOnOpen: true,
+    closeByBackdropClick: true,
+  },
   serviceWorker: {
     path: 'service-worker.js',
   },
@@ -60,8 +64,8 @@ var app = new Framework7({
 }
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
-  loop: true,
+  direction: 'horizontal',
+  loop: false,
 
   // If we need pagination
   pagination: {
@@ -78,4 +82,10 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
 });
