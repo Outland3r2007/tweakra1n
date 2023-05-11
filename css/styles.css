@@ -22,7 +22,11 @@
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
-      
+  .card-opened > .card-content {
+                                                padding-top: 120px;
+                                                    transition: .5s;
+                                                }
+                                  
       .slider{
         display: flex;
         overflow-x: auto;
