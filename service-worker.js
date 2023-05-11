@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-app-cache';
+const CACHE_NAME = 'tweakra1n';
 
 self.addEventListener('install', event => {
   event.waitUntil(
