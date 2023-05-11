@@ -9,6 +9,7 @@ self.addEventListener('install', event => {
         'app.html',
         'light.html',
         'dark.html',
+        'home.html',
         'f7.css',
         'css/styles.css',
         'js/app.js',
