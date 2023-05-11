@@ -17,6 +17,13 @@ self.addEventListener('install', event => {
         'assets/favicon.ico'
         'manifest.json',
         'manifest2.json',
+        'ipasource/home.html',
+        'ipasource/search.html',
+        'ipasource/settings.html',
+        'ipasource/terms.html',
+        'ipasource/start.html',
+        'ipasource/css/styles.css',
+        'ipasource/manifest.json',
       ]))
   );
 });
