@@ -4,8 +4,6 @@
   "description": "Your new favorite AppStore",
   "lang": "en-US",
   "display": "standalone",
-  "background_color": "#EE350F",
-  "theme_color": "#EE350F",
   "icons": [
     {
       "src": "assets/favicon.ico",
