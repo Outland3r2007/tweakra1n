@@ -20,4 +20,5 @@ After you opened https://tweakrain.tk/app.html you can add it to your homescreen
 ## Credits
 - [New icon (@OuniDesigns)](https://twitter.com/OuniDesigns/)
 - [Icon (@jam_minty)](https://twitter.com/jam_minty/)
-- [Owner and solo developer (@Outland3r2007)](https://twitter.com/Outland3r2007/) 
+- [Owner and main developer (@Outland3r2007)](https://twitter.com/Outland3r2007/) 
+- [Developer (@straight_tamago)](https://twitter.com/straight_tamago/) 
