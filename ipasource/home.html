@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iPASource</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta name="theme-color" content="#000">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/framework7-icons@5/css/framework7-icons.min.css">
+        <link rel="apple-touch-icon" href="assets/favicon.ico">
+        <link rel="manifest" href="manifest.json">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+       <meta property="og:site_name" content="iPASource">
+       <meta property="og:title" content="iPASource">
+       <meta property="og:type" content="website">
+       <meta property="og:description" content="A new way to experience tweaks">
+       <meta property="og:image" content="assets/favicon.ico">
+       <meta property="og:image:type" content="image/jpeg">
+       <meta property="og:image:width" content="1024">
+       <meta property="og:image:height" content="1024">
+       <meta charset="utf-8">
+       <meta name="apple-mobile-web-app-capable" content="yes"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+<body>
+<div id="splash-screen">
+  <img src="assets/circlefavicon.ico"></div>
+  </div>
+<br>
+<br>
+<h5 style="font-family:arial;margin-left:20px;font-size:10px;">	                                                                     
+<p id="greetings"><b></b></p>
+<script>
+var myDate = new Date();
+var hrs = myDate.getHours();
+
+var greet;
+
+if (hrs < 12)
+  greet = 'Good Morning ☀️';
+else if (hrs >= 12 && hrs <= 17)
+  greet = 'Good Afternoon 🥱';
+else if (hrs >= 17 && hrs <= 24)
+  greet = 'Good Evening 🌙';
+
+document.getElementById('greetings').innerHTML ='<b>' + greet + '</b>';
+</script>
+     </h5>
+<h1 data-aos="fade-up" style="font-family:arial;font-size:30px;color:#fff;margin-left:17px">Featured</h1>
+<center>
+ <a href="https://discord.com/invite/bbJAqj7np5">
+<div class="featured">
+<img class="banner" src="assets/banners/misaka.png">
+<img class="icon" src="assets/misaka.png">
+<h1>misaka</h1>
+<p>MDC Package Manager</p>
+</div>
+</a>
+</div>
+</div>
+<br>
+</center>
+<hr data-aos="fade-up" class="line">
+<center>
+       <div data-aos="fade-up" class="app">
+                <a href="https://tweakrain.tk">GET</a>
+                <img src="https://tweakrain.tk/assets/favicon.ico">
+                <h2>tweakra1n <i style="font-size:17px;"class="f7-icons">checkmark_seal_fill</i></h2>
+                <p>3rd Party AppStore</p>
+            </div>
+            <div data-aos="fade-up" class="app">
+                <a href="https://github.com/opa334/Dopamine/releases/latest/download/Dopamine.tipa">GET</a>
+                <img src="https://ellekit.space/dopamine/assets/icon.png">
+                <h2>Dopamine</h2>
+                <p>iOS 15.0-15.4.1 Jailbreak</p>
+            </div>
+            <div data-aos="fade-up" class="app">
+                <a href="itms-services://?action=download-manifest&url=https://gitlab.com/Forelps/respring/-/raw/main/app.plist">GET</a>
+                <img src="https://i.stack.imgur.com/kOnzy.gif">
+                <h2>SpringBoard</h2>
+                <p>Respring your iDevice</p>
+            </div>
+            </center>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+</div>
+</div>
+</div>
+    <div class="navbar">	
+    <a href="#" class="current"><i style="font-size:33px;" class="f7-icons">today_fill</i></a>
+<a href="search.html" class="none"><i style="font-size:33px;" class="f7-icons">search_circle</i></a>
+<a href="settings.html" class="none"><i style="font-size:33px;" class="f7-icons">gear</i></a>
+</div>
+</div>
+</div>
+</center>
+</body>
+  <div data-aos="zoom-in" class="topnav">Home</div>
+</html>
+<script>
+  AOS.init();
+</script>
+<script>
+if (document.cookie.indexOf("visited=true") === -1) {
+
+  var expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 20);
+  document.cookie = "visited=true; expires=" + expirationDate.toUTCString();
+
+  window.location.href = "start.html";
+}
+</script>
+<script>
+const splash = document.getElementById('splash-screen');
+
+  // Get the timestamp from localStorage
+  const lastVisit = localStorage.getItem("lastVisit");
+
+  // If last visit is less than 3 minutes ago, hide splash screen and exit
+  if (lastVisit && (Date.now() - lastVisit) < (2 * 60 * 1000)) {
+    splash.style.display = 'none';
+    exit;
+  }
+
+  // Otherwise, show the splash screen and update the last visit timestamp
+  splash.style.display = 'flex';
+  localStorage.setItem("lastVisit", Date.now());
+
+  // Hide splash screen after 6 seconds
+  setTimeout(() => {
+    splash.style.display = 'none';
+  }, 6000);
+  </script>

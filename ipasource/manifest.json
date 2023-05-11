@@ -1,0 +1,15 @@
+{
+  "name": "iPASource",
+  "short_name": "iPASource",
+  "lang": "en-US",
+  "display": "standalone",
+  "background_color": "#000",
+  "theme_color": "#000",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}
