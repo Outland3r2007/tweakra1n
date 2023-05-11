@@ -3,7 +3,7 @@
   "short_name": "tweakra1n",
   "description": "Your new favorite AppStore",
   "lang": "en-US",
-  "start_url": "light.html",
+  "start_url": "home.html",
   "display": "standalone",
   "icons": [
     {
