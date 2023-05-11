@@ -3,15 +3,21 @@
 The new App Store
 
 •tweakra1n is the newest and the safest 3rd party App Store
+
 •Free forever
 
 ## Features
 •Block Revokes
+
 •Block ADS
-•Block Software Updates
+
 •Respring
+
 •A lot of tweaks
+
 •Native iOS app design
+
+•And much more...
 
 ## Installing
 After you opened https://tweakrain.tk/app.html you can add it to your homescreen by clicking the ShareSheet and pressing Add to Homescreen
