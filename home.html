@@ -1492,5 +1492,17 @@ function reset() {
   }
 }
 </script>
+<script>
+// Create preloader dialog
+var preloaderDialog = app.dialog.preloader('Loading...');
+
+// Show preloader dialog
+preloaderDialog.open();
+
+// Hide preloader dialog after 4 seconds
+setTimeout(function() {
+  preloaderDialog.close();
+}, 3300);
+</script>
 
 </html>
