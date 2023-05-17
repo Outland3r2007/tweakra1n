@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="ios ios-translucent-bars ios-translucent-modals device-pixel-ratio-2 device-ios dark">
-
+<html lang="en" class="ios ios-translucent-bars ios-translucent-modals device-pixel-ratio-2 device-ios ios dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +16,7 @@
     <meta property="og:image:height" content="1024">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="assets/favicon.ico"><noscript>This app requires Javascript enabled to run.</noscript>
+    <noscript>This app requires Javascript enabled to run.</noscript>
     <link rel="apple-touch-icon" href="assets/favicon.ico">
 
     <link rel="stylesheet" href="css/f7.css">
@@ -201,25 +200,23 @@
                                                                 </a>
                                                             </li>
                                                         </ul>
-                                                    </div>
+                         <br>
+                         <br>
+                         <br>
+                         <br>                                                                                   </div>
                                                 </div>
                                             </div>
-
-                                            <!-- Tabs -->
-                                            <div class="card-backdrop card-backdrop-out"></div>
+        <div class="card-backdrop card-backdrop-out"></div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- App List -->
                                 <div id="tab2" class="tab ">
                                     <div data-page="app" class="page">
-                                        <div class="searchbar-backdrop"></div>
+                          <div class="searchbar-backdrop"></div>
                                         <form class="searchbar searchbar-init"
                                               data-search-container=".app-list"
                                               data-search-in=".item-title">
-                                            <div class="searchbar-inner">
-                                                <div class="searchbar-input-wrap animated zoomIn">
+                                            <div class="searchbar-inner">                                                <div class="searchbar-input-wrap animated zoomIn">
                                                     <input type="search" placeholder="Search" class=""
                                                            style="border-radius:11px;">
                                                     <i class="searchbar-icon"></i>
@@ -233,7 +230,7 @@
                                         <div class="page-content">
                                             <div class="list list-strong inset searchbar-not-found">
                                                 <ul>
-                                                    <li>Nothing found</li>
+                                                    <li>Nothing found :(</li>
                                                 </ul>
                                             </div>
                                             <div class="list list-strong media-list inset app-list">
@@ -241,10 +238,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <script>
-                                    function screenshot_elem(screenshots) {
+                                </div>                                <script>                                    function screenshot_elem(screenshots) {
                                         var html = ""
                                         for (const screenshot of screenshots) {
                                             html += `
@@ -353,7 +347,7 @@
                                                     <div class="swiper-wrapper" id="featured"
                                                          aria-live="polite"
                                                          style="transform: translate3d(0px, 0px, 0px);">
-                                                        <a href="/article/6/"
+                                                        <a href="#"
                                                            class="link swiper-slide popup-open"
                                                            data-popup="#eonhub-popup" role="group"
                                                            aria-label="1 / 4"
@@ -391,13 +385,11 @@
                                                          class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal">
                                                         <span class="swiper-pagination-bullet swiper-pagination-bullet-active"
                                                               aria-current="true"></span>
+                                                        
                                                         <span class="swiper-pagination-bullet"></span>
                                                         <span class="swiper-pagination-bullet"></span>
                                                         <span class="swiper-pagination-bullet"></span>
-                                                        <span class="swiper-pagination-bullet"></span>
-                                                        <span class="swiper-pagination-bullet"></span>
-                                                        <span class="swiper-pagination-bullet"></span>
-                                                        <span class="swiper-pagination-bullet"></span>
+                                                                                                                                                                       
                                                     </div>
                                                     <span class="swiper-notification"
                                                           aria-live="assertive" aria-atomic="true"></span>
@@ -495,7 +487,7 @@
                                                             applyDarkModeSetting();
                                                         </script>
                                                     </li>
-                                                    <li>
+                           <li>
                                                         <a href="#"
                                                            class="item-link item-content popup-open"
                                                            data-popup="#community-popup">
@@ -895,11 +887,11 @@
                                                 <div class="page-content">
                                                     <div class="block">
                                                         <div class="block block-strong inset">
-                                                            <h2>v3.4.1</h2>
+                                                            <h2>v3.4.2</h2>
                                                             <p>What's new in this update?</p>
                                                             <p>🪲Bug fixes</p>
                                                             <p>Code optimizations.</p>
-                                                            <p>🎨Theme settings are now saved.</p><p>📱tweakra1n is now displayed in fullscreen.</p><p>Added loading when opening the app.</p>
+                                                            <p>The images and text cannot be copied anymore,just like a real app.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -910,13 +902,7 @@
 
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
-
 <script src="https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.js"></script>
 <script src="js/routes.js"></script>
 <script src="js/app.js"></script>
@@ -924,10 +910,9 @@
 <script src="service-worker.js"></script>
 <script>
 function reset() {
-  // Display a confirmation dialog with cancel and ok buttons
+
   const confirmed = confirm("Are you sure you want to reset tweakra1n?");
 
-  // If the user clicks the ok button, clear the cookies
   if (confirmed) {
     var cookies = document.cookie.split(";");
   for (var i = 0; i < cookies.length; i++) {
@@ -941,13 +926,10 @@ function reset() {
 }
 </script>
 <script>
-// Create preloader dialog
-var preloaderDialog = app.dialog.preloader('Loading...');
+var preloaderDialog = app.dialog.preloader('Reloading data...');
 
-// Show preloader dialog
 preloaderDialog.open();
 
-// Hide preloader dialog after 4 seconds
 setTimeout(function() {
   preloaderDialog.close();
 }, 3300);

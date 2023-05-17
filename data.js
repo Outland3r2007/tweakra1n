@@ -120,6 +120,21 @@ var apps = [
       badge: ""
   },
   {
+      id: "eclipse",
+      title: "Eclipse",
+      subtitle: "Emulator",
+      icon: "https://eclipseemu.me/play/static/icons/apple-touch-icon.png",
+      description: "The unerevokable multi-emulator for iOS.",
+      compatible: "N/A",
+      developer: "N/A",
+      get_link: "https://eclipseemu.me/play",
+      type: "Website",
+      screenshots: [
+          "https://eclipseemu.me/web_based.webp"
+      ],
+      badge: ""
+  },
+  {
       id: "dzmoha",
       title: "DzMohaiPA",
       subtitle: "3rd Party App Store",
@@ -415,7 +430,7 @@ var apps = [
       screenshots: [
           "assets/screenshots/jailbreaks.png"
       ],
-      badge: "N/A"
+      badge: ""
   },
   {
       id: "airport",
