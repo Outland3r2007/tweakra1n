@@ -22,8 +22,20 @@
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
+body{
+ -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: moz-none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+          }
+          img {
+    pointer-events: none;
+}
   .card-opened > .card-content {
-                                                padding-top: 120px;
+                                              padding-top: 120px;
                                                     transition: .5s;
                                                 }
                                   
