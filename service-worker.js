@@ -6,15 +6,15 @@ self.addEventListener('install', event => {
       .then(cache => cache.addAll([
         '/',
         'index.html',
-        'app.html',
-        'light.html',
-        'dark.html',
         'home.html',
-        'f7.css',
+        'css/f7.css',
         'css/styles.css',
         'js/app.js',
         'js/nobounce.js',
         'js/routes.js',
+        './data.js'
+        'https://cdn.jsdelivr.net/npm/framework7@7/framework7-bundle.min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css',
         'assets/favicon.ico'
         'manifest.json',
         'manifest2.json',
