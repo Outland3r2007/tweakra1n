@@ -20,7 +20,7 @@ The new App Store
 •And much more...
 
 ## Installing
-After you opened https://tweakrain.tk/app.html you can add it to your homescreen by clicking the ShareSheet and pressing Add to Homescreen
+After you opened https://tweakrain.tk/home.html you can add it to your homescreen by clicking the ShareSheet and pressing Add to Homescreen
 
 
 ## Credits
