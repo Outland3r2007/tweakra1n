@@ -89,3 +89,36 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
+var preloaderDialog = app.dialog.preloader('Reloading data...');
+
+preloaderDialog.open();
+
+setTimeout(function() {
+  preloaderDialog.close();
+}, 3300);
+function preventBackSwipe(event) {
+  // Check if the swipe is from the left edge of the screen
+  if (event.touches && event.touches.length && event.touches[0].clientX < 10) {
+    event.preventDefault();
+  }
+}
+
+// Attach event listeners to the document
+document.addEventListener('touchstart', preventBackSwipe, { passive: false });
+document.addEventListener('touchmove', preventBackSwipe, { passive: false });
+function reset() {
+
+  const confirmed = confirm("Are you sure you want to reset tweakra1n?");
+
+  if (confirmed) {
+    var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i];
+    var eqPos = cookie.indexOf("=");
+    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    window.location.href = "home.html";
+    }
+  }
+}
+
