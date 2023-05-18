@@ -439,53 +439,7 @@
                                                                 </label>
                                                             </div>
                                                         </div>
-                                                        <script>
-                                                            function toggleDarkMode() {
-                                                                const htmlElement = document.querySelector('html');
-                                                                const isDarkModeEnabled = htmlElement.classList.contains('dark');
-
-                                                                if (isDarkModeEnabled) {
-                                                                    htmlElement.classList.remove('dark');
-                                                                    updateLampColor('light');
-                                                                    document.cookie = 'darkModeEnabled=0; expires=Fri, 31 Dec 9999 23:59:59 GMT';
-                                                                } else {
-                                                                    htmlElement.classList.add('dark');
-                                                                    updateLampColor('dark');
-                                                                    document.cookie = 'darkModeEnabled=1; expires=Fri, 31 Dec 9999 23:59:59 GMT';
-                                                                }
-                                                            }
-                                                            function applyDarkModeSetting() {
-                                                                const htmlElement = document.querySelector('html');
-                                                                const cookie = document.cookie;
-                                                                const isDarkModeEnabled = cookie.split(';')
-                                                                    .find(c => c.trim().startsWith('darkModeEnabled='))
-                                                                    ?.split('=')[1] === '1';
-
-                                                                if (isDarkModeEnabled) {
-                                                                    htmlElement.classList.add('dark');
-                                                                    updateLampColor('dark');
-                                                                    toggleDarkMode_checkbox.checked = true
-                                                                } else {
-                                                                    htmlElement.classList.remove('dark');
-                                                                    updateLampColor('light');
-                                                                    toggleDarkMode_checkbox.checked = false
-                                                                }
-                                                            }
-                                                            function updateLampColor(mode) {
-                                                                const lampLinks = document.querySelectorAll('.tab-link');
-                                                                const lamptabbar = document.querySelectorAll('.tabbar');
-                                                                const color = mode === 'dark' ? '#fff' : '#000';
-
-                                                                lampLinks.forEach(link => {
-                                                                    link.style.setProperty('--lamp-color', color);
-                                                                });
-                                                                lamptabbar.forEach(link => {
-                                                                    link.style.setProperty('--active-lamp-color', color);
-                                                                });
-                                                            }
-
-                                                            applyDarkModeSetting();
-                                                        </script>
+                                                       
                                                     </li>
                            <li>
                                                         <a href="#"
@@ -504,7 +458,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="https://tweakrain.tk/ag"
+                                                        <a href="https://8i84knjeb8a.typeform.com/to/sAa0TVwt"
                                                            class="item-link item-content external">
                                                             <div class="item-media">
                                                                 <i
