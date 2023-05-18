@@ -284,7 +284,7 @@
                                             <div class="popup" id="`+ app.id + `-popup">
                                                 <div class="view">
                                                     <div class="page">
-                                                        <div class="navbar navbar-large no-hairline">
+                                                        <div class="navbar navbar-large no-outline">
                                                             <div class="navbar-bg"></div>
                                                             <div class="navbar-inner">
                                                                 <div class="title sliding"></div>
@@ -722,7 +722,7 @@
                                 <div class="popup" id="team-popup">
                                     <div class="view">
                                         <div class="page">
-                                            <div class="navbar navbar-large no-hairline">
+                                            <div class="navbar navbar-large no-outline">
                                                 <div class="navbar-bg"></div>
                                                 <div class="navbar-inner">
                                                     <div class="title sliding"></div>
@@ -830,7 +830,7 @@
                                     <div class="view">
                                         <div class="page">
                                             <center>
-                                                <div class="navbar navbar-large no-hairline">
+                                                <div class="navbar navbar-large no-outline">
                                                     <div class="navbar-bg"></div>
                                                     <div class="navbar-inner">
                                                         <div class="title sliding"></div>
@@ -871,7 +871,7 @@
                                     <div class="view">
                                         <div class="page">
                                             <center>
-                                                <div class="navbar navbar-large no-hairline">
+                                                <div class="navbar navbar-large no-outline">
                                                     <div class="navbar-bg"></div>
                                                     <div class="navbar-inner">
                                                         <div class="title sliding"></div>
@@ -908,31 +908,4 @@
 <script src="js/app.js"></script>
 <script src="js/nobounce.js"></script>
 <script src="service-worker.js"></script>
-<script>
-function reset() {
-
-  const confirmed = confirm("Are you sure you want to reset tweakra1n?");
-
-  if (confirmed) {
-    var cookies = document.cookie.split(";");
-  for (var i = 0; i < cookies.length; i++) {
-    var cookie = cookies[i];
-    var eqPos = cookie.indexOf("=");
-    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    window.location.href = "home.html";
-    }
-  }
-}
-</script>
-<script>
-var preloaderDialog = app.dialog.preloader('Reloading data...');
-
-preloaderDialog.open();
-
-setTimeout(function() {
-  preloaderDialog.close();
-}, 3300);
-</script>
-
 </html>
