@@ -89,6 +89,7 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
+//Preloader
 var preloaderDialog = app.dialog.preloader('Reloading data...');
 
 preloaderDialog.open();
@@ -96,16 +97,7 @@ preloaderDialog.open();
 setTimeout(function() {
   preloaderDialog.close();
 }, 3300);
-function preventBackSwipe(event) {
-  // Check if the swipe is from the left edge of the screen
-  if (event.touches && event.touches.length && event.touches[0].clientX < 10) {
-    event.preventDefault();
-  }
-}
-
-// Attach event listeners to the document
-document.addEventListener('touchstart', preventBackSwipe, { passive: false });
-document.addEventListener('touchmove', preventBackSwipe, { passive: false });
+//Reset function
 function reset() {
 
   const confirmed = confirm("Are you sure you want to reset tweakra1n?");
@@ -121,4 +113,50 @@ function reset() {
     }
   }
 }
+//Dark theme
+function toggleDarkMode() {
+                                                                const htmlElement = document.querySelector('html');
+                                                                const isDarkModeEnabled = htmlElement.classList.contains('dark');
 
+                                                                if (isDarkModeEnabled) {
+                                                                    htmlElement.classList.remove('dark');
+                                                                    updateLampColor('light');
+                                                                    document.cookie = 'darkModeEnabled=0; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+                                                                } else {
+                                                                    htmlElement.classList.add('dark');
+                                                                    updateLampColor('dark');
+                                                                    document.cookie = 'darkModeEnabled=1; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+                                                                }
+                                                            }
+                                                            function applyDarkModeSetting() {
+                                                                const htmlElement = document.querySelector('html');
+                                                                const cookie = document.cookie;
+                                                                const isDarkModeEnabled = cookie.split(';')
+                                                                    .find(c => c.trim().startsWith('darkModeEnabled='))
+                                                                    ?.split('=')[1] === '1';
+
+                                                                if (isDarkModeEnabled) {
+                                                                    htmlElement.classList.add('dark');
+                                                                    updateLampColor('dark');
+                                                                    toggleDarkMode_checkbox.checked = true
+                                                                } else {
+                                                                    htmlElement.classList.remove('dark');
+                                                                    updateLampColor('light');
+                                                                    toggleDarkMode_checkbox.checked = false
+                                                                }
+                                                            }
+                                                            function updateLampColor(mode) {
+                                                                const lampLinks = document.querySelectorAll('.tab-link');
+                                                                const lamptabbar = document.querySelectorAll('.tabbar');
+                                                                const color = mode === 'dark' ? '#fff' : '#000';
+
+                                                                lampLinks.forEach(link => {
+                                                                    link.style.setProperty('--lamp-color', color);
+                                                                });
+                                                                lamptabbar.forEach(link => {
+                                                                    link.style.setProperty('--active-lamp-color', color);
+                                                                });
+                                                            }
+
+                                                            applyDarkModeSetting();
+                                           
