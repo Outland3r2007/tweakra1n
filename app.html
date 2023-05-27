@@ -945,15 +945,16 @@
 <script src="service-worker.js"></script>
 </html>
 <script>
-const images = document.querySelectorAll('img');
+    function replaceImage(img) {
+      img.src = 'assets/default.png'; 
+    }
 
-images.forEach(img => {
-  img.addEventListener('error', function handleError() {
-    const defaultImage =
-      'assets/default.png';
-
-    img.src = defaultImage;
-    img.alt = 'default';
-  });
-});
-</script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var images = document.getElementsByTagName('img');
+      for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('error', function() {
+          replaceImage(this);
+        });
+      }
+    });
+  </script>
