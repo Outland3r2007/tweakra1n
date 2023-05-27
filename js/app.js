@@ -43,6 +43,7 @@ var app = new Framework7({
          swipeToClose: true,
          closeByBackdropClick: true,
          push: true,
+         swipeHandler: '.popup-swipe-nav'
     },
     sheet: {
         closeOnEscape: true,
@@ -58,27 +59,24 @@ var app = new Framework7({
     closeByBackdropClick: true,
   },
   serviceWorker: {
-    path: 'service-worker.js',
+    path: './service-worker.js',
   },
 });
 }
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
+
   direction: 'horizontal',
   loop: false,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
@@ -89,30 +87,111 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
-//Preloader
-var preloaderDialog = app.dialog.preloader('Reloading data...');
+// Assuming you have already initialized the Framework7 app and assigned it to the 'app' variable
+//Old navbar
+function tabbar() {
+	
+}
 
-preloaderDialog.open();
+const isChecked = localStorage.getItem('togglePreference') === 'true';
 
-setTimeout(function() {
-  preloaderDialog.close();
-}, 3300);
-//Reset function
-function reset() {
+const toggleSwitch = document.getElementById('toggle-switch');
 
-  const confirmed = confirm("Are you sure you want to reset tweakra1n?");
+const updateToolbarClass = () => {
+  const toolbar = document.querySelector('.toolbar');
+  const toolbarInner = document.querySelector('.toolbar-inner');
+  if (toggleSwitch.checked) {
+    toolbar.classList.remove('lamp-tabbar', 'tabbar-highlight');
+    toolbarInner.style.marginLeft = '10px';
+  } else {
+    toolbar.classList.add('lamp-tabbar', 'tabbar-highlight');
+    toolbarInner.style.marginLeft = '';
+  }
+};
 
-  if (confirmed) {
-    var cookies = document.cookie.split(";");
-  for (var i = 0; i < cookies.length; i++) {
-    var cookie = cookies[i];
-    var eqPos = cookie.indexOf("=");
-    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    window.location.href = "home.html";
+
+const saveTogglePreference = () => {
+  localStorage.setItem('togglePreference', toggleSwitch.checked);
+};
+
+toggleSwitch.checked = isChecked;
+
+toggleSwitch.addEventListener('change', updateToolbarClass);
+toggleSwitch.addEventListener('change', saveTogglePreference);
+
+updateToolbarClass();
+
+//Reduce Motion
+function animated() {
+	
+}
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
     }
   }
+  return null;
 }
+
+function setCookie(name, value, days) {
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = 'expires=' + date.toUTCString();
+  document.cookie = name + '=' + value + ';' + expires + ';path=/';
+}
+
+const animationToggle = document.getElementById('animation-toggle');
+const stylesheet = document.createElement('link');
+stylesheet.rel = 'stylesheet';
+stylesheet.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css';
+
+animationToggle.addEventListener('change', function() {
+  if (animationToggle.checked) {
+   
+    if (stylesheet.parentNode) {
+      stylesheet.parentNode.removeChild(stylesheet);
+    }
+    setCookie('animationPreference', 'disabled', 30);
+  } else {
+     document.head.appendChild(stylesheet);
+    setCookie('animationPreference', 'enabled', 30);
+  }
+});
+
+const animationPreference = getCookie('animationPreference');
+if (animationPreference === 'disabled') {
+  animationToggle.checked = true; 
+  if (stylesheet.parentNode) {
+    stylesheet.parentNode.removeChild(stylesheet);
+  }
+} else {
+  animationToggle.checked = false; 
+  document.head.appendChild(stylesheet);
+}
+//Reset
+function reset() {
+  app.dialog.confirm(
+    "Are you sure you want to reset tweakra1n?", 
+    "Reset", 
+    () => { 
+      var cookies = document.cookie.split(";"); // 
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie; 
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+      
+      localStorage.clear();
+      
+      window.location.href = "app.html";
+    }
+  );
+}
+
 //Dark theme
 function toggleDarkMode() {
                                                                 const htmlElement = document.querySelector('html');
@@ -160,3 +239,157 @@ function toggleDarkMode() {
 
                                                             applyDarkModeSetting();
                                            
+// Accent color
+function color() {
+	
+}
+var colors = [
+  { name: 'Default', value: '#3E84F6' },
+  { name: 'Red', value: '#FF6347' },
+  { name: 'Green', value: '#32CD32' },
+  { name: 'Orange', value: 'orange' },
+  { name: 'Pink', value: 'pink' },
+  { name: 'Grey', value: 'grey' }
+];
+
+var colorButton = document.querySelector('.open-color-picker');
+var colorPicker = null;
+
+function initializeColorPicker() {
+  // Create color picker
+  colorPicker = app.picker.create({
+    inputEl: colorButton,
+    rotateEffect: true,
+    sheetPush: true,
+    sheetSwipeToClose: true,
+    cols: [
+      {
+        textAlign: 'center',
+        values: colors.map(function (color) {
+          return color.name;
+        }),
+        displayValues: colors.map(function (color) {
+          return color.name;
+        })
+      }
+    ],
+    on: {
+      change: function (picker, values) {
+        var selectedColor = colors.find(function (color) {
+          return color.name === values[0];
+        });
+
+        if (selectedColor) {
+          document.documentElement.style.setProperty('--f7-ios-primary', selectedColor.value);
+          document.documentElement.style.setProperty('--f7-ios-primary-shade', selectedColor.value);
+          document.documentElement.style.setProperty('--f7-ios-primary-tint', selectedColor.value);
+
+          localStorage.setItem('colorPreference', selectedColor.value);
+        }
+      }
+    }
+  });
+
+  var savedColor = localStorage.getItem('colorPreference');
+  if (savedColor) {
+    document.documentElement.style.setProperty('--f7-ios-primary', savedColor);
+    document.documentElement.style.setProperty('--f7-ios-primary-shade', savedColor);
+    document.documentElement.style.setProperty('--f7-ios-primary-tint', savedColor);
+    colorPicker.setValue([colors.find(function (color) { return color.value === savedColor; }).name]);
+  }
+}
+
+function color() {
+  if (colorPicker === null) {
+    initializeColorPicker();
+  } else {
+    colorPicker.open();
+  }
+}
+
+colorButton.addEventListener('click', color);
+
+initializeColorPicker();
+
+//Font
+function font() {
+
+}
+
+var fonts = [
+  { name: 'Default', value: 'Default Font' },
+  { name: 'Verdana', value: 'Verdana' },
+  { name: 'Courier New', value: 'Courier New' },
+  { name: 'Cursive', value: 'Cursive' }
+];
+
+var fontButton = document.querySelector('.open-font-picker');
+var fontPicker = null;
+
+function initializeFontPicker() {
+ 
+  fontPicker = app.picker.create({
+    inputEl: fontButton,
+    rotateEffect: true,
+    sheetPush: true,
+    sheetSwipeToClose: true,
+    scrollToInput: true,
+    cols: [
+      {
+        textAlign: 'center',
+        values: fonts.map(function (font) {
+          return font.name;
+        }),
+        displayValues: fonts.map(function (font) {
+          return font.name;
+        })
+      }
+    ],
+    on: {
+      change: function (picker, values) {
+        var selectedFont = values[0];
+
+        if (selectedFont !== 'Default') {
+          document.body.style.fontFamily = selectedFont;
+          localStorage.setItem('fontPreference', selectedFont);
+        } else {
+          document.body.style.fontFamily = '';
+          localStorage.removeItem('fontPreference');
+        }
+      }
+    }
+  });
+
+  var savedFont = localStorage.getItem('fontPreference');
+  if (savedFont) {
+    document.body.style.fontFamily = savedFont;
+    fontPicker.setValue([savedFont]);
+  }
+}
+
+function handleButtonClick() {
+  if (fontPicker === null) {
+    initializeFontPicker();
+  } else {
+    fontPicker.open();
+  }
+}
+
+fontButton.addEventListener('click', handleButtonClick);
+
+initializeFontPicker();
+
+if (window.navigator && window.navigator.standalone) {
+//Preloader
+var preloaderDialog = app.dialog.preloader('Reloading data...');
+
+preloaderDialog.open();
+
+setTimeout(function() {
+  preloaderDialog.close();
+}, 3300);
+
+} else {
+   app.popup.open('#hs');
+
+}
