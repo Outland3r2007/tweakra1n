@@ -27,6 +27,19 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
+      id: "sauce",
+      title: "sauce",
+      subtitle: "3rd Party App Store",
+      icon: "assets/default.png",
+      description: "The 3rd party store for crack addicts.",
+      compatible: "N/A",
+      get_link: "https://puffer.is-a.dev/sauce/",
+      type: "Website",
+      screenshots: [
+      ],
+      badge: "checkmark_seal_fill"
+  },
+  {
       id: "blacklist",
       title: "Blacklist",
       subtitle: "MacDirtyCow",
