@@ -8,17 +8,12 @@
   --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
-}
-.md {
-  --f7-theme-color: var(--f7-ios-primary);
-  --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
-  --f7-theme-color-shade: var(--f7-ios-primary-shade);
-  --f7-theme-color-tint: var(--f7-ios-primary-tint);
+  --f7-block-inset-border-radius: 15px;
+  --f7-list-inset-border-radius: 15px;
 }
 .ios .color-primary,
 .ios.color-primary {
   --f7-theme-color: var(--f7-ios-primary);
-  --f7-theme-color-rgb: var(--f7-ios-primary-rgb);
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
@@ -26,7 +21,7 @@ body{
  -webkit-touch-callout: none;
   -webkit-user-select: none;
    -khtml-user-select: none;
-     -moz-user-select: moz-none;
+     -moz-user-select: none;
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
@@ -34,6 +29,11 @@ body{
           img {
     pointer-events: none;
 }
+ #system-info {
+      font-family: system-ui;
+      padding: 10px;
+      margin: 10px;
+    }
   .card-opened > .card-content {
                                               padding-top: 120px;
                                                     transition: .5s;
@@ -55,9 +55,9 @@ body{
       margin:5px;
       }      
       .popup{
-      border-top-left-radius: 30px;
-      border-top-right-radius:30px;
-      margin-top:40px;
+      border-top-left-radius: 15px;
+      border-top-right-radius:15px;
+      margin-top:43px;
       }
       .popup-close{
       padding-top:10px;
@@ -96,19 +96,6 @@ body{
       display: block; 
       margin-right: -52px
       }
-      .col-100{
-      margin-top:16px;
-      
-      }
-      .col-50{
-      margin-top:16px;
-      }
-      .col-50 i{
-      font-size:20px
-      }
-      .col-100 i{
-      font-size:25px
-      }
       .button-raised{
       border-radius: 10px;
       }
@@ -119,7 +106,7 @@ body{
       font-size:8px;
       }             
       .get{
-      background-color: #3E84F6; width: 60px; height: 28px; border-radius: 30px; text-align: center; line-height: 27.5px; font-weight: bold; font-size: 1.17em; box-sizing: border-box; color: white; display: inline-block; vertical-align: text-bottom; margin-top: 8px; margin-bottom: 5px;
+      background-color: var(--f7-ios-primary); width: 60px; height: 28px; border-radius: 30px; text-align: center; line-height: 27.5px; font-weight: bold; font-size: 1.17em; box-sizing: border-box; color: white; display: inline-block; vertical-align: text-bottom; margin-top: 8px; margin-bottom: 5px;
       }
       .bg{
       height:fixed;
@@ -142,7 +129,7 @@ body{
       border-radius:20px;
     }
       .toolbar-bottom{
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
      }
-    
+    .popup-swipe-nav{position:absolute;height:30px;z-index:500;left:0;top:0;width:100%;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));background:var(--handler-navbar-bg)}.tr-swipe-handler{--f7-popup-border-radius: 20px 20px 0 0;--f7-block-strong-border-color: transparent;height:calc(100% - var(--f7-navbar-height) - var(--f7-safe-area-top));top:calc(var(--f7-navbar-height) + var(--f7-safe-area-top) + 3%)}.tr-swipe-handler .navbar-bg{background:var(--handler-navbar-bg)}.tr-swipe-handler .navbar{height:30px}
