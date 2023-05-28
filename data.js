@@ -566,16 +566,28 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Show the infinite progress dialog
+function showInfiniteProgress() {
+  app.dialog.progress('Refreshing files...', 'infinite');
+}
+
+// Hide the infinite progress dialog
+function hideInfiniteProgress() {
+  app.dialog.close();
+}
+
 function update() {
-  
   app.dialog.confirm('This will re-register the service-worker and update all the files.', 'Refresh app files?', function() {
-   
-    var preloaderDialog = app.dialog.preloader('Refreshing files...');
-    preloaderDialog.open();
+    showInfiniteProgress();
 
     setTimeout(function() {
-      preloaderDialog.close();
-      window.location.reload(); 
+      hideInfiniteProgress();
+
+      app.dialog.alert('Files successfully refreshed!', 'Success', function() {
+        // Reload the page only if the user presses "OK"
+        window.location.reload();
+      });
+
     }, 3000);
 
     if ('serviceWorker' in navigator) {
@@ -586,13 +598,10 @@ function update() {
       }).then(() => {
          navigator.serviceWorker.register('service-worker.js')
           .then(registration => {
-            
             console.log('Service worker re-registered:', registration);
-
             registration.update();
           })
           .catch(error => {
-            
             console.error('Service worker registration failed:', error);
           });
       });
