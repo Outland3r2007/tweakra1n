@@ -13,20 +13,6 @@ var apps = [
 //     badge: ""
 // },
   {
-      id: "ipasource",
-      title: "iPASource",
-      subtitle: "3rd Party App Store",
-      icon: "ipasource/assets/favicon.ico",
-      description: 'Best iPA Library.',
-      compatible: "N/A",
-      get_link: "ipasource/home.html",
-      type: "Website",
-      screenshots: [
-          "assets/screenshots/ipasource.png"
-      ],
-      badge: "checkmark_seal_fill"
-  },
-  {
       id: "sauce",
       title: "sauce",
       subtitle: "3rd Party App Store",
@@ -38,6 +24,19 @@ var apps = [
       screenshots: [
       ],
       badge: "checkmark_seal_fill"
+  },
+  {
+      id: "Starfiles",
+      title: "Starfiles",
+      subtitle: "N/A",
+      icon: "https://pbs.twimg.com/profile_images/1615356144603758592/ynEAl2CM_400x400.png",
+      description: "The biggest iPA Library and file sharing service.",
+      compatible: "N/A",
+      get_link: "https://starfiles.co",
+      type: "Website",
+      screenshots: [
+      ],
+      badge: ""
   },
   {
       id: "blacklist",
