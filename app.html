@@ -9,10 +9,7 @@
     <title>tweakra1n</title>
     <meta property="og:title" content="tweakra1n">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/welcome.png">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1024">
-    <meta property="og:image:height" content="1024">
+    <meta property="og:image" content="assets/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
     <noscript>This app requires Javascript enabled to run.</noscript>
@@ -52,9 +49,9 @@
                                 <div class="navbar-bg"></div>
                                 <div class="navbar-inner">
                                     <div class="title sliding">
-                                        <i class="f7-icons animated backInLeft">rectangle_stack_fill</i>
+                                        <img src="assets/favicon.ico" style="width:30px;border-radius:23.3%;">
                                     </div>
-                                    <div class="right">                                        <a href="#" class="item-link item-content popup-open" data-popup="#team-popup">                                            <i class="f7-icons">person_2_fill</i>                                        </a>                                        <a onclick="location.reload();" class="item-link item-content">                                            <i class="f7-icons">arrow_2_circlepath_circle_fill</i>                                        </a>
+                                    <div class="right">                                        <a href="#" class="item-link item-content popup-open" data-popup="#team-popup">                                            <i class="f7-icons">heart_fill</i>                                        </a>                                        <a onclick="location.reload();" class="item-link item-content">                                            <i class="f7-icons">arrow_2_circlepath_circle_fill</i>                                        </a>
                                     </div>
                                     <div class="title-large">                                        <div class="title-large-text animated zoomIn">tweakra1n</div>
                                     </div>
@@ -257,7 +254,8 @@
                                                                 <div
                                                                     style="display: inline-block; padding-left:2.5%; margin-bottom: -4.5%;">
                                                                     <h4 style="color: #808080;">Name</h4>
-                                                                    <h3 style="margin-top: -20px">`+ app.title + `</h3>
+                                                                    <h3 style="margin-top: -20px">`+ app.title + `<i style="font-size:17px;"
+                                                                        class="f7-icons">`+ app.badge + ` </i></h3>
                                                                     <h4 style="color: #808080;">Type</h4>
                                                                     <h3 style="margin-top: -20px">`+ app.type + `</h3>
                                                                 </div>
@@ -350,11 +348,11 @@
                                         <div class="page-content">
                                 <div class="block-title">Settings</div>
                                             <div class="list media-list list-strong inset">
-                                                <ul>
+                                                <ul class="animated flipInY">
                                                     <li>
                                                         <div style="padding-left: 16px; padding-right: 15px;">
                                                             <div class="item-media" style="display: inline-block;">
-                                                                <i class="icon f7-icons if-not-md ">circle_lefthalf_fill</i>
+                                                                <i class="icon f7-icons if-not-md">circle_lefthalf_fill</i>
                                                                 <div style="display: inline-block; padding-top: 5px;">
                                                                     <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Dark Mode</span>
                                                                 </div>
@@ -368,7 +366,7 @@
                                                         </div>
                                                                     </li> 
                                                                     </ul>
-                               <p>                                                                                                         <ul>
+                               <p>                                                                                                         <ul class="animated flipInY">
                                                                     
                               <li>
   <a href="javascript:color()" class="item-link item-content open-color-picker">
@@ -384,12 +382,12 @@
 </li>
 </ul>
                                <p>
-                              <p>                                                                                                         <ul>
+                              <p>                                                                                                         <ul class="animated flipInY">
                                                                     
                               <li>
   <a href="javascript:update()" class="item-link item-content open-color-picker">
     <div class="item-media">
-      <i class="icon f7-icons if-not-md">arrow_2_circlepath_circle_fill</i>
+      <i class="icon f7-icons if-not-md animated flipInY">arrow_2_circlepath_circle_fill</i>
     </div>
     <div class="item-inner">
       <div class="item-title-row">
@@ -399,7 +397,7 @@
   </a>
 </li>
 </ul>
-<p>                                                                                                           <ul>  
+<p>                                                                                                           <ul class="animated flipInY">  
  <li>
   <a href="javascript:font()" class="item-link item-content open-font-picker">
     <div class="item-media">
@@ -413,7 +411,7 @@
   </a>
 </li>
 </ul>
-                               <p>                                                                                                         <ul>
+                               <p>                                                                                                         <ul class="animated flipInY">
                                <li>
                                                         <div style="padding-left: 16px; padding-right: 15px;">
                                                             <div class="item-media" style="display: inline-block;">
@@ -430,7 +428,7 @@
                                                             </div>
                                                         </div>                                                                    </li>
                                 </ul>
-                               <p>                                                                                                         <ul>                        
+                               <p>                                                                                                         <ul class="animated flipInY">                        
                                 <li>
                                                         <div style="padding-left: 16px; padding-right: 15px;">
                                                             <div class="item-media" style="display: inline-block;">
@@ -448,7 +446,7 @@
                                                         </div>
                                                                     </li> 
                                </ul>
-                               <p>                                                                                                     <ul>                                                                                                    
+                               <p>                                                                                                     <ul class="animated flipInY">                                                                                                    
                                <li>
                                                         <a onclick="reset()"
                                                            class="item-link item-content">
@@ -468,7 +466,7 @@
                                 </div>
                                 <div class="block-title">Utilities</div>
                                                 <div class="list media-list list-strong inset">
-                                                    <ul>
+                                                    <ul class="animated flipInY">
                                                         <li>
                                                             <a href="itms-services://?action=download-manifest&url=https://gitlab.com/Forelps/respring/-/raw/main/app.plist"
                                                                class="item-link item-content external">
@@ -485,7 +483,7 @@
                                                             </a>
                                                         </li>
                                  </ul>
-                               <p>                                                                                                         <ul>                       
+                               <p>                                                                                                         <ul class="animated flipInY">                       
                                <li>
                                                             <a href="#"
                                                                class="item-link item-content popup-open" data-popup="#device-popup">
@@ -502,7 +500,7 @@
                                                             </a>
                                                         </li>                         
                                  </ul>
-                               <p>                                                                                                         <ul>                       <li>
+                               <p>                                                                                                         <ul class="animated flipInY">                       <li>
                                                             <a href="https://cdn.adtidy.org/public/Dns/adguard-dns.mobileconfig"
                                                                class="item-link item-content external">
                                                                 <div class="item-media">
@@ -518,7 +516,7 @@
                                                             </a>
                                                         </li>
                                   </ul>
-                               <p>                                                                                                         <ul>                      <li>
+                               <p>                                                                                                         <ul class="animated flipInY">                      <li>
                                                             <a href="https://tweakrain.tk/assets/blockrevokes.mobileconfig"
                                                                class="item-link item-content external">
                                                                 <div class="item-media">
@@ -538,26 +536,8 @@
                                                 </div>
                                            <div class="block-title">Other</div>
                                             <div class="list media-list list-strong inset">
-                                                <ul>
-                                                                                          
-                           <li>
-                                                        <a href="#"
-                                                           class="item-link item-content popup-open"
-                                                           data-popup="#community-popup">
-                                                            <div class="item-media">
-                                                                <i
-                                                                   class="icon f7-icons if-not-md ">logo_twitter</i>
-                                                            </div>
-                                                            <div class="item-inner">
-                                                                <div class="item-title-row">
-                                                                    <div class="item-title">Join community
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                </ul>
-                               <p>                                                                                                         <ul>                   <li>
+                                                
+                               <p>                                                                                                         <ul class="animated flipInY">                   <li>
                                                         <a href="https://8i84knjeb8a.typeform.com/to/sAa0TVwt"
                                                            class="item-link item-content external">
                                                             <div class="item-media">
@@ -573,7 +553,7 @@
                                                         </a>
                                                     </li>
                                 </ul>
-                               <p>                                                                                                         <ul>                    <li>
+                               <p>                                                                                                         <ul class="animated flipInY">                    <li>
                                                         <a href="#"
                                                            class="item-link item-content popup-open"
                                                            data-popup="#terms-popup">
@@ -590,7 +570,7 @@
                                                         </a>
                                                     </li>
                                 </ul>
-                               <p>                                                                                                         <ul>                   <li>
+                               <p>                                                                                                         <ul class="animated flipInY">                   <li>
                                                         <a href="#"
                                                            class="item-link item-content popup-open"
                                                            data-popup="#changelog-popup">
@@ -673,38 +653,26 @@
                                 <div class="popup" id="community-popup">
                                     <div class="view">
                                         <div class="page">
-                                            <div class="navbar navbar-large">
-                                                <div class="navbar-bg"></div>
-                                                <div class="navbar-inner">
-                                                    <div class="title sliding"></div>
-                                                    <div class="title-large">
-                                                        <div class="title-large-text animated zoomIn">
-                                                            Community</div>
-                                                    </div>
-                                                    <div class="right"><a
-                                                           onclick="location='https://twitter.com/i/communities/1570009858610728960'"
-                                                           class="item-link item-content">Agree & Join</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="page-content">
-                                                <div style="margin-top:53px; padding:0px 30px 0px 30px; " class="block">
-                                                    <img style="display: inline-block; width:100%;  margin-top: 4.5%;border-radius: 20px;"
+                                            <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>   <div class="page-content">
+                               <div class="block-title block-title-large">Community</div>             
+                                                <div class="block">
+                                                    <img style="display: inline-block; width:100%;margin-top: 4.5%;border-radius: 20px;"
                                                          class="animated zoomIn"
                                                          src="https://pbs.twimg.com/community_banner_img/1637377260536692738/a0vIayVW?format=jpg&name=900x900">
-                                                </div>
-                                                <div class="block block-strong inset">
+                             </div>                            
+                                                                                                <div class="block block-strong inset">
                                                     <div class="block-title animated zoomIn">Join the
                                                         tweakra1n Twitter community!</div>
                                                     <p>•Get exclusive news</p>
                                                     <p>•Discuss and give us cool ideas</p>
-                                                    <p>•Get help</p>•Get unique things</p>
+                                                    <p>•Get help</p>
                                                     <div class="block-title animated zoomIn">Rules⚠️</div>
                                                     <p>•Be Kind and respectful</p>
                                                     <p>•Keep on Topic</p>
                                                     <p>•No Self promotion</p>
                                                     <p>•No Strong language</p>
                                                     <p>•Explore and share</p>
+                             <a href="https://twitter.com/i/communities/1570009858610728960" class="button button-raised button-fill external">Agree & Join</a>                      
                                                 </div>
                                             </div>
                                         </div>
@@ -716,8 +684,49 @@
                                 <div class="page">
                                <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>        
                                             
-                                            <div class="page-content"><div class="block-title block-title-large">Team</div>
-                                                <div class="block-title">Developers</div>
+                                            <div class="page-content"><div class="block-title block-title-large">Support us</div>
+                               <div class="list media-list list-strong inset">
+                                                <ul class="animated flipInY">
+                                                                                          
+                           <li>
+                                                        <a href="#"
+                                                           class="item-link item-content popup-open"
+                                                           data-popup="#community-popup">
+                                                            <div class="item-media">
+                                                                <i style="color:red;"
+                                                                   class="icon f7-icons if-not-md">heart_fill</i>
+                                                            </div>
+                                                            <div class="item-inner">
+                                                                <div class="item-title-row">
+                                                                    <div class="item-title">Donate
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                </ul>
+                                <p>
+                                <ul class="animated flipInY">
+                                                                                          
+                           <li>
+                                                        <a href="#"
+                                                           class="item-link item-content popup-open"
+                                                           data-popup="#community-popup">
+                                                            <div class="item-media">
+                                                                <i
+                                                                   class="icon f7-icons if-not-md ">logo_twitter</i>
+                                                            </div>
+                                                            <div class="item-inner">
+                                                                <div class="item-title-row">
+                                                                    <div class="item-title">Join community
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                </ul>
+                                </div>
+                                              <div class="block-title">Developers</div>
                                                 <div class="list media-list list-strong inset">
                                                     <ul>
                                                         <li>
@@ -774,7 +783,7 @@
                                                                         <div class="item-title">OuniDesigns
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-subtitle">Current Icon
+                                                                    <div class="item-subtitle">Old and current icon
                                                                     </div>
                                                                 </div>
                                                             </a>
@@ -794,12 +803,13 @@
                                                                         <div class="item-title">jam_minty
                                                                         </div>
                                                                     </div>
-                                                                    <div class="item-subtitle">Old Icon
+                                                                    <div class="item-subtitle">2nd Icon
                                                                     </div>
                                                                 </div>
                                                             </a>
                                                         </li>
-                                                    </ul>                   
+                                                    </ul> 
+                                                    </div>                  
                                                     <div class="block block-strong inset">
                                                         <p>You can support our work by following us on
                                                             Twitter and other social media apps or by
@@ -820,8 +830,8 @@
                                                     <div style="margin-top:53px;padding:0px;" class="block">
                                                         <div class="block block-strong inset">
                                                             <p>
-                                                            <p>We do not recieve any of your personal data
-                                                            </p>
+                                                            <p>•We do not recieve any of your personal data
+                                                            </p><p>•This web-app is using cookies to save your Settings</p><p>
                                                             •You agree that some tweaks or apps
                                                             may collect data.</p>
                                                             <p>•You agree that we are not responsible for
@@ -844,16 +854,14 @@
                                     <div class="view">
                                       
                                <div class="page">
-                               <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div> 
-                                            
-                                                <div class="page-content">
+                               <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>                                                                                             <div class="page-content">
                                 <div class="block-title block-title-large">Changelog</div>                    <div class="block">
                                                         <div class="block block-strong inset">
-                                                            <h2>v4.0.0</h2>
+                                                            <h2>v4.1.0</h2>
                                                             <p>What's new in this update?</p>
-                                                            <p>🪲Bug fixes and improvements</p>
-                                                            <p>Code optimizations.</p>
-                                                            <p>New UI</p><p>Customization features added</p>New icon by @OuniDesigns</p>
+                                                            <p>🪲Fixed a bug where the Verified Badge was not displayed in the tweak depiction.</p>
+                                                            <p>•Added missing animations.</p>
+                                                            <p>•Fixed not being able to swipe to close the Community popup.</p><p>📱Added the ability to use tweakra1n on your browser without adding to homscreen.</p><p>•UI improvements</p><p>📄Added a new font(monospace).</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -892,12 +900,12 @@
       '<strong>System Version:</strong> ' + systemVersion;
   </script>
                                                                              </div>                                                    </div>                                                </div>                                           </center>                                       </div>
-                              <div class="popup" id="hs">                                                                                                    <div class="page">                                                                                                          <div class="page-content">                                                                                   <div class="block block-strong inset">
-               <div class="block-title block-title-large">Add to HomeScreen</div>                                                                                                                                         
-                  <p>To use tweakra1n you need to add it to your HomeScreen.</p>
+                              <div class="popup" id="hs" style="margin-top:0px;border-radius:0px;">                                                                                                    <div class="page">                                                                                                          <div class="page-content">                                                                                   <div class="block block-strong inset">
+               <div class="block-title block-title-large animated zoomIn">Add to HomeScreen</div>                                                                                                                                         
+                  <p class="animated bounceIn">To use tweakra1n you need to add it to your HomeScreen.</p>
                 </div>
             <div class="list list-strong inset">
-              <ul>
+              <ul class="animated flipInY">
                 <li>
                   <div class="item-content">
                     <div class="item-media">
@@ -908,7 +916,7 @@
                 </li>
                 </ul>
                 <p>
-                <ul>
+                <ul class="animated flipInY">
                 <li>
                   <div class="item-content">
                     <div class="item-media">
@@ -919,7 +927,7 @@
                 </li>
                 </ul>
                 <p>
-                <ul>
+                 <ul class="animated flipInY">
                 <li>
                   <div class="item-content">
                     <div class="item-media">
@@ -931,7 +939,8 @@
                   </div>
                 </li>
               </ul>
-            </div>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div>                                               
+              <p>
+            <a href="javascript:hs()" class="button button-raised button-fill">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div>                                               
                                     </div>
                                 </div>
                             </div>
