@@ -171,26 +171,32 @@ if (animationPreference === 'disabled') {
   animationToggle.checked = false; 
   document.head.appendChild(stylesheet);
 }
-//Reset
+// Reset
 function reset() {
   app.dialog.confirm(
-    "Are you sure you want to reset tweakra1n?", 
-    "Reset", 
-    () => { 
-      var cookies = document.cookie.split(";"); // 
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var eqPos = cookie.indexOf("=");
-        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie; 
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      }
-      
-      localStorage.clear();
-      
-      window.location.href = "app.html";
+    "Are you sure you want to reset tweakra1n?",
+    "Reset",
+    () => {
+      app.dialog.progress('Resetting...', 'infinite'); // Show the infinite progress dialog
+
+      setTimeout(() => {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i];
+          var eqPos = cookie.indexOf("=");
+          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+
+        localStorage.clear();
+
+        hideInfiniteProgress(); // Hide the infinite progress dialog
+        window.location.href = "app.html";
+      }, 3000);
     }
   );
 }
+
 //Use in web
 function hs() {
   app.dialog.confirm(
