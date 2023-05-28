@@ -19,7 +19,7 @@ if (document.location.search.indexOf('theme=') >= 0) {
     theme = document.location.search.split('theme=')[1].split('&')[0];
 }
 
-// Init App
+// Initialise App
 var app = new Framework7({
     id: 'com.Outlander.tweakra1n',
     root: '#app',
@@ -43,6 +43,7 @@ var app = new Framework7({
          swipeToClose: true,
          closeByBackdropClick: true,
          push: true,
+         swipeToClose: 'to-bottom',
          swipeHandler: '.popup-swipe-nav'
     },
     sheet: {
@@ -87,7 +88,6 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
-// Assuming you have already initialized the Framework7 app and assigned it to the 'app' variable
 //Old navbar
 function tabbar() {
 	
@@ -191,6 +191,16 @@ function reset() {
     }
   );
 }
+//Use in web
+function hs() {
+  app.dialog.confirm(
+    "Some features will not be available.", 
+    "Use in web?", 
+    () => { 
+      app.popup.close('#hs');
+    }
+  );
+}
 
 //Dark theme
 function toggleDarkMode() {
@@ -256,7 +266,7 @@ var colorButton = document.querySelector('.open-color-picker');
 var colorPicker = null;
 
 function initializeColorPicker() {
-  // Create color picker
+  
   colorPicker = app.picker.create({
     inputEl: colorButton,
     rotateEffect: true,
@@ -319,6 +329,7 @@ function font() {
 var fonts = [
   { name: 'Default', value: 'Default Font' },
   { name: 'Verdana', value: 'Verdana' },
+  { name: 'Monospace', value: 'monospace' },
   { name: 'Courier New', value: 'Courier New' },
   { name: 'Cursive', value: 'Cursive' }
 ];
