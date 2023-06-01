@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -23,19 +24,18 @@
 <body>
     <div id="app" class="framework7-root">
         <div class="views tabs">
-            <div class="toolbar tabbar toolbar-bottom lamp-tabbar tabbar-highlight no-outline"
-                 style="--active-lamp-color: #fff;">
+            <div class="toolbar tabbar toolbar-bottom lamp-tabbar tabbar-highlight no-outline">          
                 <div class="toolbar-inner">
-                    <a href="#tab1" style="--lamp-color: #fff" class="tab-link tab-link-active">
+                    <a href="#tab1" class="tab-link tab-link-active">
                         <i style="font-size: 27px" class="f7-icons">today_fill</i>
                     </a>
-                    <a href="#tab3" style="--lamp-color: #fff" class="tab-link">
+                    <a href="#tab3" class="tab-link">
                         <i style="font-size: 27px" class="f7-icons">globe</i>
                     </a>
-                    <a href="#tab2" style="--lamp-color: #fff" class="tab-link">
+                    <a href="#tab2" class="tab-link">
                         <i style="font-size: 27px" class="f7-icons">search_circle</i>
                     </a>
-                    <a href="#tab4" style="--lamp-color: #fff" class="tab-link">
+                    <a href="#tab4" class="tab-link">
                         <i style="font-size: 27px" class="f7-icons">gear</i>
                     </a>
                 </div>
@@ -48,8 +48,7 @@
                             <div class="navbar navbar-large">
                                 <div class="navbar-bg"></div>
                                 <div class="navbar-inner">
-                                    <div class="title sliding">
-                                        <img src="assets/favicon.ico" style="width:30px;border-radius:23.3%;">
+                                    <div class="title sliding">                                        <img src="assets/favicon.ico" style="width:30px;border-radius:23.3%;">
                                     </div>
                                     <div class="right">                                        <a href="#" class="item-link item-content popup-open" data-popup="#team-popup">                                            <i class="f7-icons">heart_fill</i>                                        </a>                                        <a onclick="location.reload();" class="item-link item-content">                                            <i class="f7-icons">arrow_2_circlepath_circle_fill</i>                                        </a>
                                     </div>
@@ -59,8 +58,7 @@
                             </div>
                             <div class="tabs">
                                 <div id="tab1" class="tab tab-active ">
-                                    <div data-page="app" class="page">
-                                        <div class="page-content hide-toolbar-on-scroll" id="popup_list">                                                                                        <h5 style="font-family:arial;margin-left:20px;font-size:13px;">                                                <p id="greetings"><b></b></p>                                                <script>                                                    var myDate = new Date();
+                                    <div data-page="app" class="page">                                        <div class="page-content" id="popup_list">                                                                                        <h5 style="font-family:arial;margin-left:20px;font-size:13px;">                                                <p id="greetings"><b></b></p>                                                <script>                                                    var myDate = new Date();
                                                     var hrs = myDate.getHours();
 
                                                     var greet;
@@ -76,124 +74,34 @@
    <div class="card card-expandable card-raised">                                                <div class="card-content">                                                    <div class="bg">                                                        <div class="card-header display-block">Welcome!<br>                                                           <img style="height: 300px; margin: 20px 0px 0px 0px;" class="animated bounceIn"                                                               src="assets/welcome.png">                                                        </div>
                                                     </div>                                                    <div class="card-content-padding">                                                        <center>                                                            <h1 style="font-size:20px;margin-left:5%;margin-top:20px;">                                                                Welcome to tweakra1n!</h1>                                                            <p>•tweakra1n is the best and the safest place to tweak your
                                                                 iDevice without Jailbreak or PC.</p>                                                           <p>•tweakra1n is completely free and no ads forever.</p>                                                            <p>•Easy to use,user friendly and modern UI</p>                                                        </center>                                                    </div>                                                </div>                                            </div>
-   <div class="card card-expandable card-raised">
-                                                <div class="card-content">
-                                                    <div class="bg">
-                                                        <div class="card-header display-block">YouTube Channels
-                                                            <br>
-                                                            <img style="height: 300px; margin: 20px 0px 0px 0px; box-shadow:
+   <div class="card card-expandable card-raised">                                                <div class="card-content">
+                                                    <div class="bg">                                                        <div class="card-header display-block">YouTube Channels                                                            <br>                                                            <img style="height: 300px; margin: 20px 0px 0px 0px; box-shadow:
                                                             inset 0 -3em 3em rgba(0,0,0,0.1),
                                                                   0 0  0 2px rgb(255,255,255),
                                                                   0.3em 0.3em 1em rgba(0,0,0,0.3); border-radius: 75px;" class="animated bounceIn"
-                                                                 src="assets/yt.png">
-                                                        </div>
-                                                    </div>
-                                                    <div class="block-title">YouTube channels</div>
-                                                    <div class="list list-strong list-dividers inset">
-                                                        <ul>
-                                                            <li>
-                                                                <a onclick="location='https://m.youtube.com/channel/UCyir8Y5n3NFqNFIXXPxCgMQ?cbrd=1'"
-                                                                   class="item-link item-content">
-                                                                    <div class="item-media">
-                                                                        <img class=" animated zoomIn"
-                                                                             src="assets/yt/dynamictech.png" width="60">
-                                                                    </div>
-                                                                    <div class="item-inner">
-                                                                        <div class="item-title-row">
-                                                                            <div class="item-title">dynamicTech</div>
-                                                                        </div>
-                                                                        <div class="item-subtitle">
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a onclick="location='https://m.youtube.com/c/favoritetechx'"
-                                                                   class="item-link item-content">
-                                                                    <div class="item-media">
-                                                                        <img class="animated zoomIn"
-                                                                             src="assets/yt/favoritetechx.png"
-                                                                             width="60">
-                                                                    </div>
-                                                                    <div class="item-inner">
-                                                                        <div class="item-title-row">
-                                                                            <div class="item-title">FavoriteTechX</div>
-                                                                        </div>
-                                                                        <div class="item-subtitle">
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a onclick="location='https://m.youtube.com/c/favoritetechx'"
-                                                                   class="item-link item-content">
-                                                                    <div class="item-media">
-                                                                        <img class="animated zoomIn"
-                                                                             src="assets/yt/idevicehelp.png" width="60">
-                                                                    </div>
-                                                                    <div class="item-inner">
-                                                                        <div class="item-title-row">
-                                                                            <div class="item-title">iDeviceHelp</div>
-                                                                        </div>
-                                                                        <div class="item-subtitle">
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a onclick="location='https://m.youtube.com/channel/UCqu881BONQHZfwDQ_Mjrw8A'"
-                                                                   class="item-link item-content">
-                                                                    <div class="item-media">
-                                                                        <img class=" animated zoomIn"
-                                                                             src="assets/yt/ireviews.png" width="60">
-                                                                    </div>
-                                                                    <div class="item-inner">
-                                                                        <div class="item-title-row">
-                                                                            <div class="item-title">iReviews</div>
-                                                                        </div>
-                                                                        <div class="item-subtitle">
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
+                                                                 src="assets/yt.png">                                                        </div>                                                    </div>                                                    <div class="block-title">YouTube channels</div>                                                    <div class="list list-strong list-dividers inset">                                                        <ul>                                                            <li>                                                                <a onclick="location='https://m.youtube.com/channel/UCyir8Y5n3NFqNFIXXPxCgMQ?cbrd=1'"
+                                                                   class="item-link item-content">                                                                    <div class="item-media">                                                                        <img class=" animated zoomIn"
+                                                                             src="assets/yt/dynamictech.png" width="60">                                                                    </div>                                                                    <div class="item-inner">                                                                        <div class="item-title-row">                                                                            <div class="item-title">dynamicTech</div>                                                                        </div>                                                                        <div class="item-subtitle">                                                                        </div>                                                                    </div>                                                               </a>                                                            </li>                                                            <li>                                                                <a onclick="location='https://m.youtube.com/c/favoritetechx'"
+                                                                   class="item-link item-content">                                                                    <div class="item-media">                                                                        <img class="animated zoomIn"                                                                             src="assets/yt/favoritetechx.png"
+                                                                             width="60">                                                                    </div>                                                                    <div class="item-inner">                                                                        <div class="item-title-row">                                                                            <div class="item-title">FavoriteTechX</div>                                                                        </div>                                                                        <div class="item-subtitle">                                                                        </div>                                                                    </div>                                                                </a>                                                            </li>                                                            <li>                                                                <a onclick="location='https://m.youtube.com/c/favoritetechx'"
+                                                                   class="item-link item-content">                                                                    <div class="item-media">                                                                        <img class="animated zoomIn"
+                                                                             src="assets/yt/idevicehelp.png" width="60">                                                                    </div>                                                                    <div class="item-inner">                                                                        <div class="item-title-row">                                                                            <div class="item-title">iDeviceHelp</div>                                                                        </div>                                                                        <div class="item-subtitle">                                                                        </div>                                                                    </div>                                                                </a>                                                            </li>                                                            <li>                                                                <a onclick="location='https://m.youtube.com/channel/UCqu881BONQHZfwDQ_Mjrw8A'"
+                                                                   class="item-link item-content">                                                                    <div class="item-media">                                                                        <img class=" animated zoomIn"
+                                                                             src="assets/yt/ireviews.png" width="60">                                                                    </div>                                                                    <div class="item-inner">                                                                        <div class="item-title-row">                                                                            <div class="item-title">iReviews</div>                                                                        </div>                                                                        <div class="item-subtitle">                                                                        </div>                                                                    </div>                                                                </a>                                                            </li>                                                        </ul>
                          <br>
                          <br>
                          <br>
-                         <br>                                                                                   </div>
-                                                </div>
-                                            </div>
-        <div class="card-backdrop card-backdrop-out"></div>
-                                        </div>
+                         <br>                                                                                   </div>                                                </div>                                            </div>
+        <div class="card-backdrop card-backdrop-out"></div>                                        </div>
                                     </div>
                                 </div>
                                 <div id="tab2" class="tab ">
                                     <div data-page="app" class="page">
-                          <div class="searchbar-backdrop"></div>
-                                        <form class="searchbar searchbar-init"
+                          <div class="searchbar-backdrop"></div>                                        <form class="searchbar searchbar-init"
                                               data-search-container=".app-list"
-                                              data-search-in=".item-title">
-                                            <div class="searchbar-inner">                                                <div class="searchbar-input-wrap animated zoomIn">
-                                                    <input type="search" placeholder="Search" class=""
-                                                           style="border-radius:11px;">
-                                                    <i class="searchbar-icon"></i>
-                                                    <span class="input-clear-button">
-                                                    </span>
-                                                </div>
-                                                <span
-                                                      class="searchbar-disable-button color-blue">Cancel</span>
-                                            </div>
-                                        </form>
-                                        <div class="page-content">
-                                            <div class="list list-strong inset searchbar-not-found">
-                                                <ul>
-                                                    <li>Nothing found :(</li>
-                                                </ul>
-                                            </div>
-                                            <div class="list list-strong list-dividers media-list inset app-list">
-                                            <ul id="app_list"></ul>
-                                            </div>
-                                        </div>
+                                              data-search-in=".item-title">                                            <div class="searchbar-inner">                                                <div class="searchbar-input-wrap animated zoomIn">                                                    <input type="search" placeholder="Search" class=""
+                                                           style="border-radius:11px;">                                                    <i class="searchbar-icon"></i>                                                    <span class="input-clear-button">                                                    </span>                                                </div>                                                <span
+                                                      class="searchbar-disable-button color-blue">Cancel</span>                                            </div>                                        </form>                                        <div class="page-content">                                            <div class="list list-strong inset searchbar-not-found">                                                <ul>                                                    <li>Nothing found :(</li>                                                </ul>                                            </div>                                            <div class="list list-strong list-dividers media-list inset app-list">                                            <ul id="app_list"></ul>                                            </div>                                        </div>
                                     </div>
                                 </div>                                <script>                                    function screenshot_elem(screenshots) {
                                         var html = ""
@@ -207,90 +115,41 @@
                                     }
                                     for (const app of apps) {
                                         app_list.innerHTML += `                                        
-                                        <li>
-                                                <a href="#" class="popup-open"
-                                                    data-popup="#`+ app.id + `-popup">
-                                                    <div class="item-content">
-                                                        <div class="item-media">
-                                                            <img src="`+ app.icon + `"
-                                                                    class="animated zoomIn">
-                                                        </div>
-                                                        <div class="item-inner">
-                                                            <div class="item-title-row">
-                                                                <div class="item-title">`+ app.title + `
-                                                                    <i style="font-size:17px;"
-                                                                        class="f7-icons">`+ app.badge + `</i>
-                                                                </div>
-                                                                <div class="item-title"
-                                                                        style="color: #1C1C1E;">
-                                                                </div>
-                                                            </div>
-                                                            <div class="item-title-row item-title"
+                                        <li>                                                <a href="#" class="popup-open"
+                                                    data-popup="#`+ app.id + `-popup">                                                    <div class="item-content">                                                        <div class="item-media">                                                            <img src="`+ app.icon + `"                                                                    class="animated zoomIn">                                                        </div>                                                        <div class="item-inner">                                                            <div class="item-title-row">                                                                <div class="item-title">`+ app.title + `                                                                    <i style="font-size:17px;"                                                                        class="f7-icons">`+ app.badge + `</i>                                                                </div>                                                                <div class="item-title"
+                                                                        style="color: #1C1C1E;">                                                                </div>                                                            </div>                                                            <div class="item-title-row item-title"
                                                                     style="color: rgb(128, 128, 128);">
-                                                                    `+ app.subtitle + `</div>
-                                                            <div class="item-title-row item-title"
+                                                                    `+ app.subtitle + `</div>                                                            <div class="item-title-row item-title"
                                                                     style="color: rgb(128, 128, 128); font-size: 14px;">
                                                                     `+ app.compatible + `</div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
+                                                        </div>                                                    </div>                                                </a>                                            </li>
                                           
                              
                                             
                                         `
 
                                         popup_list.innerHTML += `
-                                            <div class="popup" id="`+ app.id + `-popup">
-                                                
-                                                    <div class="page">
-                               <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>                   
-                                                        <div class="page-content">                       
-                                                            <div style="margin-top:53px;padding:0px;" class="block">
-                                                                <img
+                                            <div class="popup" id="`+ app.id + `-popup">                                                                                                    <div class="page">
+                               <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>                                                                           <div class="page-content">                                                                                   <div style="margin-top:53px;padding:0px;" class="block">                                                                <img
                                                                     style="display: inline-block; width:25%; margin-left: 5%; margin-top: 4.5%;border-radius: 23.3%;"
                                                                     class="animated zoomIn" src=" `+ app.icon + `"
-                                                                    width="60">
-                                                                <div
-                                                                    style="display: inline-block; padding-left:2.5%; margin-bottom: -4.5%;">
-                                                                    <h4 style="color: #808080;">Name</h4>
-                                                                    <h3 style="margin-top: -20px">`+ app.title + `<i style="font-size:17px;"
-                                                                        class="f7-icons">`+ app.badge + ` </i></h3>
-                                                                    <h4 style="color: #808080;">Type</h4>
-                                                                    <h3 style="margin-top: -20px">`+ app.type + `</h3>
-                                                                </div>
-                                                                <div class="get" <a
-                                                                    onclick="location='`+ app.get_link + `'">
-                                                                    GET</div>
-                                                            </div>
-                                                            <div class="block block-strong inset">
-                                                                <h2>Description</h2>
-                                                                <p>
+                                                                    width="60">                                                                <div
+                                                                    style="display: inline-block; padding-left:2.5%; margin-bottom: -4.5%;">                                                                    <h4 style="color: #808080;">Name</h4>                                                                    <h3 style="margin-top: -20px">`+ app.title + `<i style="font-size:17px;"
+                                                                        class="f7-icons">`+ app.badge + ` </i></h3>                                                                    <h4 style="color: #808080;">Type</h4>                                                                    <h3 style="margin-top: -20px">`+ app.type + `</h3>                                                                </div>                                                                <div class="get" <a                                                                    onclick="location='`+ app.get_link + `'">
+                                                                    GET</div>                                                            </div>                                                            <div class="block block-strong inset">                                                                <h2>Description</h2>                                                                <p>
                                                                     `+ app.description + `
                                                                         <br>
                                                                     `+ app.compatible + `
-                                                                </p>
-                                                                <h2>Screenshots</h2>
-                                                                <center>
-                                                                    <div class="screenshot">
+                                                                </p>                                                                <h2>Screenshots</h2>                                                                <center>                                                                    <div class="screenshot">
                                                                         `+ screenshot_elem(app.screenshots) + `
-                                                                    </div>
-                                                                </center>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                                    </div>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div>
                                         `
                                     }
                                 </script>
 
                                 <div id="tab3" class="tab ">
-                                    <div data-page="app" class="page">
-                                        <div class="page-content">
-                                            <div class="block-title">Featured</div>
-                                            <div class="block">
-                                                <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden">
+                                    <div data-page="app" class="page">                                        <div class="page-content">                                            <div class="block-title">Featured</div>
+                                    <div>                                                                                            <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden">
     <div class="swiper-wrapper" id="swiper-wrapper-a1f5d4bc746ebd21" aria-live="polite">
       <div class="swiper-slide swiper-slide-active popup-open" data-popup="#eonhub-popup" role="group" aria-label="1 / 4" data-swiper-slide"><img class="animated fadeIn"src="assets/banners/eonhub.png"></div>
       <div class="swiper-slide swiper-slide-next popup-open" data-popup="#scarlet-popup" role="group" aria-label="2 / 4" data-swiper-slide"><img class="animated fadeIn"src="assets/banners/scarlet.png"></div>
@@ -298,80 +157,22 @@
       <div class="swiper-slide popup-open" data-popup="#appbox-popup" role="group" aria-label="4 / 4" data-swiper-slide"><img class="animated fadeIn"src="assets/banners/appbox.png"></div>
     </div>
     <br>
-    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"></span><span class="swiper-pagination-bullet" tabindex="0" role="button"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" ></span></div>
   <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                                                <div class="block-title">Repos</div>
-                                                <div class="list media-list list-strong inset">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="misaka://addrepo=https://tweakrain.tk/repos/misaka/misaka.json"
-                                                               class="item-link item-content external">
-                                                                <div class="item-media">
-                                                                    <i
-                                                                       class="icon f7-icons if-not-md animated zoomIn">square_list_fill</i>
-                                                                </div>
-                                                                <div class="item-inner">
-                                                                    <div class="item-title-row">
-                                                                        <div class="item-title">misaka</div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                               <div class="block-title">Guides</div>
-                                                <div class="list media-list list-strong inset">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="https://ios.cfw.guide"
-                                                               class="item-link item-content external">
-                                                                <div class="item-media">
-                                                                    <i
-                                                                       class="icon f7-icons if-not-md animated zoomIn">lock_open_fill</i>
-                                                                </div>
-                                                                <div class="item-inner">
-                                                                    <div class="item-title-row">
-                                                                        <div class="item-title">Jailbreak guide</div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>                 
-                                            </div>
-                                        </div>
+  <div>
+  <div class="block-title">News</div>                                                
+<div id="news"></div>
+                                                                                   </div>                                                             </div>                                        </div>
                                     </div>
                                 </div>
-
                                 <div id="tab4" class="tab">
-                                    <div data-page="app" class="page">
-                                        <div class="page-content">
-                                <div class="block-title">Settings</div>
-                                            <div class="list media-list list-strong inset">
-                                                <ul class="animated flipInY">
-                                                    <li>
-                                                        <div style="padding-left: 16px; padding-right: 15px;">
-                                                            <div class="item-media" style="display: inline-block;">
-                                                                <i class="icon f7-icons if-not-md">circle_lefthalf_fill</i>
-                                                                <div style="display: inline-block; padding-top: 5px;">
-                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Dark Mode</span>
-                                                                </div>
-                                                            </div>
-                                                            <div style="float: right; margin-top: 9px;">
-                                                                <label class="toggle toggle-init color-black">
-                                                                    <input type="checkbox" id="toggleDarkMode_checkbox" onchange="toggleDarkMode()" checked />
-                                                                    <span class="toggle-icon"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                                    </li> 
-                                                                    </ul>
-                               <p>                                                                                                         <ul class="animated flipInY">
-                                                                    
+                                    <div data-page="app" class="page">                                        <div class="page-content">
+                                <div class="block-title">Settings</div>                                         <div class="list media-list list-strong inset">                                                <ul class="animated flipInY">                                                    <li>                                                        <div style="padding-left: 16px; padding-right: 15px;">                                                            <div class="item-media" style="display: inline-block;">                                                                <i class="icon f7-icons if-not-md">circle_lefthalf_fill</i>                                                                <div style="display: inline-block; padding-top: 5px;">                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Dark Mode</span>                                                                </div>                                                            </div>                                                            <div style="float: right; margin-top: 9px;">                                                                <label class="toggle toggle-init color-black">                                                                    <input type="checkbox" id="toggleDarkMode_checkbox" onchange="toggleDarkMode()" checked />                                                                    <span class="toggle-icon"></span>                                                                </label>                                                            </div>                                                        </div>                                                                    </li>                                                                  </ul>
+                               <p>                                                                                                         <ul class="animated flipInY">                                                                    
                               <li>
   <a href="javascript:color()" class="item-link item-content open-color-picker">
     <div class="item-media">
-      <i style="color: var(--f7-ios-primary);"class="icon f7-icons if-not-md">circle_fill</i>
+      <i style="color: var(--f7-ios-primary);"class="icon f7-icons if-not-md ">circle_fill</i>
     </div>
     <div class="item-inner">
       <div class="item-title-row">
@@ -382,8 +183,7 @@
 </li>
 </ul>
                                <p>
-                              <p>                                                                                                         <ul class="animated flipInY">
-                                                                    
+                              <p>                                                                                                         <ul class="animated flipInY">                                                                    
                               <li>
   <a href="javascript:update()" class="item-link item-content open-color-picker">
     <div class="item-media">
@@ -397,6 +197,21 @@
   </a>
 </li>
 </ul>
+<p>                                                                                                         <ul class="animated flipInY">                                                                    
+                              <li>
+  <a href="#" class="item-link item-content popup-open" data-popup="#icon">
+    <div class="item-media">
+      <i class="icon f7-icons if-not-md">app</i>
+    </div>
+    <div class="item-inner">
+      <div class="item-title-row">
+        <div class="item-title">App Icon</div>
+      </div>
+    </div>
+  </a>
+</li>
+</ul>
+                               <p>
 <p>                                                                                                           <ul class="animated flipInY">  
  <li>
   <a href="javascript:font()" class="item-link item-content open-font-picker">
@@ -412,99 +227,28 @@
 </li>
 </ul>
                                <p>                                                                                                         <ul class="animated flipInY">
-                               <li>
-                                                        <div style="padding-left: 16px; padding-right: 15px;">
-                                                            <div class="item-media" style="display: inline-block;">
-                                                                <i class="icon f7-icons if-not-md ">waveform_path</i>
-                                                                <div style="display: inline-block; padding-top: 5px;">
-                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Reduce motion</span>
-                                                                </div>
-                                                            </div>
-                                                            <div style="float: right; margin-top: 9px;">
-                                                                <label class="toggle toggle-init">
-                                                                    <input type="checkbox" id="animation-toggle" onchange="animated()">
-                                                                    <span class="toggle-icon"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>                                                                    </li>
+                               <li>                                                        <div style="padding-left: 16px; padding-right: 15px;">                                                            <div class="item-media" style="display: inline-block;">                                                                <i class="icon f7-icons if-not-md ">waveform_path</i>                                                                <div style="display: inline-block; padding-top: 5px;">                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Reduce motion</span>                                                                </div>                                                            </div>                                                            <div style="float: right; margin-top: 9px;">                                                                <label class="toggle toggle-init">                                                                    <input type="checkbox" id="animation-toggle" onchange="animated()">                                                                    <span class="toggle-icon"></span>                                                                </label>                                                            </div>                                                        </div>                                                                    </li>
                                 </ul>
                                <p>                                                                                                         <ul class="animated flipInY">                        
-                                <li>
-                                                        <div style="padding-left: 16px; padding-right: 15px;">
-                                                            <div class="item-media" style="display: inline-block;">
-                                                                <i class="icon f7-icons if-not-md ">bars</i>
-                                                                <div style="display: inline-block; padding-top: 5px;">
-                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Old Navbar</span>
-                                                                </div>
-                                                            </div>
-                                                            <div style="float: right; margin-top: 9px;">
-                                                                <label class="toggle toggle-init">
-                                                                    <input type="checkbox" id="toggle-switch" onchange="tabbar()" checked />
-                                                                    <span class="toggle-icon"></span>
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                                    </li> 
+                                <li>                                                        <div style="padding-left: 16px; padding-right: 15px;">                                                        <div class="item-media" style="display: inline-block;">                                                                <i class="icon f7-icons if-not-md ">bars</i>                                                                <div style="display: inline-block; padding-top: 5px;">                                                                    <span style="padding-left: 14px; font-weight: var(--f7-list-media-item-title-font-weight, var(--f7-list-item-title-font-weight, inherit));">Old Navbar</span>                                                                </div>                                                            </div>                                                            <div style="float: right; margin-top: 9px;">                                                                <label class="toggle toggle-init">                                                                    <input type="checkbox" id="toggle-switch" onchange="tabbar()" checked />                                                                    <span class="toggle-icon"></span>                                                                </label>                                                            </div>                                                        </div>                                                                    </li> 
                                </ul>
                                <p>                                                                                                     <ul class="animated flipInY">                                                                                                    
-                               <li>
-                                                        <a onclick="reset()"
-                                                           class="item-link item-content">
-                                                            <div class="item-media">
-                                                                <i style="color:red;"
-                                                                   class="icon f7-icons if-not-md ">trash_fill</i>
-                                                            </div>
-                                                            <div class="item-inner">
-                                                                <div class="item-title-row">
-                                                                    <div class="item-title">Reset
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>                                                                         
+                               <li>                                                        <a onclick="reset()"
+                                                           class="item-link item-content">                                                            <div class="item-media">                                                                <i style="color:red;"
+                                                                   class="icon f7-icons if-not-md ">trash_fill</i>                                                            </div>                                                            <div class="item-inner">                                                             <div class="item-title-row">                                                                    <div class="item-title">Reset                                                                    </div>                                                                </div>                                                            </div>                                                        </a>                                                   </li>                                                                         
                                 </ul>
                                 </div>
-                                <div class="block-title">Utilities</div>
-                                                <div class="list media-list list-strong inset">
-                                                    <ul class="animated flipInY">
-                                                        <li>
-                                                            <a href="itms-services://?action=download-manifest&url=https://gitlab.com/Forelps/respring/-/raw/main/app.plist"
-                                                               class="item-link item-content external">
-                                                                <div class="item-media">
-                                                                    <i
-                                                                       class="icon f7-icons if-not-md ">rays</i>
-                                                                </div>
-                                                                <div class="item-inner">
-                                                                    <div class="item-title-row">
-                                                                        <div class="item-title">Respring
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
+                                <div class="block-title">Utilities</div>                                                <div class="list media-list list-strong inset">                                                    <ul class="animated flipInY">                                                        <li>                                                            <a href="itms-services://?action=download-manifest&url=https://gitlab.com/Forelps/respring/-/raw/main/app.plist"
+                                                               class="item-link item-content external">                                                                <div class="item-media">                                                                    <i
+                                                                       class="icon f7-icons if-not-md ">rays</i>                                                                </div>                                                                <div class="item-inner">                                                                    <div class="item-title-row">                                                                        <div class="item-title">Respring                                                                        </div>                                                                    </div>                                                                </div>                                                           </a>                                                        </li>
                                  </ul>
                                <p>                                                                                                         <ul class="animated flipInY">                       
-                               <li>
-                                                            <a href="#"
-                                                               class="item-link item-content popup-open" data-popup="#device-popup">
-                                                                <div class="item-media">
-                                                                    <i
-                                                                       class="icon f7-icons if-not-md ">device_phone_portrait</i>
-                                                                </div>
-                                                                <div class="item-inner">
-                                                                    <div class="item-title-row">
-                                                                        <div class="item-title">Device info
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>                         
+                               <li>                                                            <a href="#"
+                                                               class="item-link item-content popup-open" data-popup="#device-popup">                                                                <div class="item-media">                                                                    <i
+                                                                       class="icon f7-icons if-not-md ">device_phone_portrait</i>                                                                </div>                                                                <div class="item-inner">                                                                    <div class="item-title-row">                                                                        <div class="item-title">Device info                                                                     </div>                                                                    </div>                                                                </div>                                                            </a>                                                        </li>                         
                                  </ul>
-                               <p>                                                                                                         <ul class="animated flipInY">                       <li>
-                                                            <a href="https://cdn.adtidy.org/public/Dns/adguard-dns.mobileconfig"
-                                                               class="item-link item-content external">
-                                                                <div class="item-media">
-                                                                    <i
+                               <p>                                                                                                         <ul class="animated flipInY">                       <li>                                                            <a href="https://cdn.adtidy.org/public/Dns/adguard-dns.mobileconfig"
+                                                               class="item-link item-content external">                                                                <div class="item-media">                                                                    <i
                                                                        class="icon f7-icons if-not-md ">rectangle_3_offgrid_fill</i>
                                                                 </div>
                                                                 <div class="item-inner">
@@ -590,62 +334,7 @@
                                             </div>
                                       <div>
                                                 
-                                            <div class="block-title">Alternate icons</div>
-                                            <div class="block block-strong inset">
-                                                <div class="slider">
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon1.mobileconfig'">
-                                                            <img class="  animated zoomIn"
-                                                                 src="customicons/Icon1.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon2.mobileconfig'">
-                                                            <img class="  animated zoomIn"
-                                                                 src="customicons/Icon2.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon3.mobileconfig'">
-                                                            <img class="  animated zoomIn"
-                                                                 src="customicons/Icon3.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon4.mobileconfig'">
-                                                            <img class="animated zoomIn"
-                                                                 src="customicons/Icon4.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon5.mobileconfig'">
-                                                            <img class="animated zoomIn"
-                                                                 src="customicons/Icon5.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon6.mobileconfig'">
-                                                            <img class="animated zoomIn"
-                                                                 src="customicons/Icon6.png">
-                                                        </span>
-                                                    </div>
-                                                    <div>
-                                                        <span
-                                                              onclick="location='customicons/Icon7.mobileconfig'">
-                                                            <img class="animated zoomIn"
-                                                                 src="customicons/Icon7.png">
-                                                        </span>
-                                                    </div>
-                                                    <br>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            
                                     </div>
                                 </div>
 
@@ -857,11 +546,11 @@
                                <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>                                                                                             <div class="page-content">
                                 <div class="block-title block-title-large">Changelog</div>                    <div class="block">
                                                         <div class="block block-strong inset">
-                                                            <h2>v4.1.0</h2>
-                                                            <p>What's new in this update?</p>
-                                                            <p>🪲Fixed a bug where the Verified Badge was not displayed in the tweak depiction.</p>
-                                                            <p>•Added missing animations.</p>
-                                                            <p>•Fixed not being able to swipe to close the Community popup.</p><p>📱Added the ability to use tweakra1n on your browser without adding to homscreen.</p><p>•UI improvements</p><p>📄Added a new font(monospace).</p>
+                                                            <h2>v4.2.0</h2>
+                                                            <p>What's new in this update?</p><p>•Added News</p><p>•Improvements for iPad.</p>
+                                                            <p>•Now you can swipe down from wherever you want in a pop-up.</p>
+                                                            <p>•Added a Nostalgic icon from Silic0nHub.</p>
+                                                            <p>•Added Certificates page.</p><p>•Smoother Dark Mode transition.</p><p>•The scrollbar is no longer dispalyed like on a real app.</p><p>•The links are no longer draggable like on a real app.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -940,7 +629,179 @@
                 </li>
               </ul>
               <p>
-            <a href="javascript:hs()" class="button button-raised button-fill">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div>                                               
+            <a href="javascript:hs()" class="button button-raised button-fill">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div> 
+             <div class="popup" id="icon">
+                                    <div class="view">
+                                <div class="page">
+                               <div class="popup-swipe-nav"><div class="link popup-close"><i class="icon f7-icons color-gray" style="font-size: 44px">chevron_compact_down</i></div></div>        
+                                            
+                                            <div class="page-content"><div class="block-title block-title-large">App Icon</div>
+                                      <div class="list media-list list-strong inset">
+                                                    <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon1.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon1.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Purple Gradient</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@Ibatech1</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>                                                                           <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon8.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon8.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Silic0nHub</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@AppInstalleriOS</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon2.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon2.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Purple Gradient 3D</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@jam_minty</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                 <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon3.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon3.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Package Manager</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@Outland3r2007</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon4.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon4.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Almost Default</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@OuniDesigns</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul> 
+                                                  <li>
+                                                            <a onclick="location='customicons/Icon5.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon5.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Tweak</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@OuniDesigns</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon6.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon6.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Old</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@Outland3r2007</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul>
+                                                        <li>
+                                                            <a onclick="location='customicons/Icon7.mobileconfig'"
+                                                               class="item-link item-content">
+                                                                <div class="item-media"><img
+                                                                        
+                                                                         class="  animated zoomIn"
+                                                                         src="customicons/Icon7.png"
+                                                                         width="70"></div>
+                                                                <div class="item-inner">
+                                                                    <div class="item-title-row">
+                                                                        <div class="item-title">
+                                                                            Purple</div>
+                                                                    </div>
+                                                                    <div class="item-subtitle">@OuniDesigns</div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                </ul>
+                                <p>
+                                <ul> 
+                                   </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                             
                                     </div>
                                 </div>
                             </div>
@@ -966,5 +827,4 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
-
   </script>
