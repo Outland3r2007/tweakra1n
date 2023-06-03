@@ -7,3 +7,7 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 ErrorDocument 404 /404.html
+RewriteEngine On
+
+# Redirect all requests to a custom page
+RewriteRule ^ /forbidden.html [R,L]
