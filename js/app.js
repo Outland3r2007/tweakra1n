@@ -44,8 +44,10 @@ var app = new Framework7({
          closeByBackdropClick: true,
          push: true,
          swipeToClose: 'to-bottom',
-         swipeHandler: '.popup-swipe-nav'
     },
+    card: {
+    hideNavbarOnOpen: true,
+  },
     sheet: {
         closeOnEscape: true,
     },
@@ -88,6 +90,9 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
+function redirectToURL(url) {
+  window.location.href = url;
+}
 //Old navbar
 function tabbar() {
 	
@@ -274,6 +279,7 @@ var colorPicker = null;
 function initializeColorPicker() {
   
   colorPicker = app.picker.create({
+    openIn: 'auto',
     inputEl: colorButton,
     rotateEffect: true,
     sheetPush: true,
@@ -346,11 +352,11 @@ var fontPicker = null;
 function initializeFontPicker() {
  
   fontPicker = app.picker.create({
+    openIn: 'auto',
     inputEl: fontButton,
     rotateEffect: true,
     sheetPush: true,
     sheetSwipeToClose: true,
-    scrollToInput: true,
     cols: [
       {
         textAlign: 'center',
@@ -398,7 +404,7 @@ initializeFontPicker();
 
 if (window.navigator && window.navigator.standalone) {
 //Preloader
-var preloaderDialog = app.dialog.preloader('Reloading data...');
+var preloaderDialog = app.dialog.preloader('Reloading data');
 
 preloaderDialog.open();
 
@@ -410,3 +416,44 @@ setTimeout(function() {
    app.popup.open('#hs');
 
 }
+
+fetch('https://www.idownloadblog.com/feed/')
+    .then(response => response.text())
+    .then(data => {
+      
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(data, 'text/xml');
+      const items = xmlDoc.getElementsByTagName('item');
+
+     
+      const newsElement = document.getElementById('news');
+
+     
+      for (let i = 0; i < items.length; i++) {
+        const title = items[i].getElementsByTagName('title')[0].textContent;
+        const link = items[i].getElementsByTagName('link')[0].textContent;
+        const mediaContent = items[i].getElementsByTagName('content:encoded')[0].textContent;
+        const parser = new DOMParser();
+        const mediaDoc = parser.parseFromString(mediaContent, 'text/html');
+        const imageElement = mediaDoc.querySelector('img');
+        const imageUrl = imageElement ? imageElement.getAttribute('src') : '#';
+
+        
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card', 'card-raised');
+        cardElement.innerHTML = `
+          <div class="card-content card-content-padding">
+            <div class="card-header">${title}</div>
+            <div class="card-image animated fadeIn" style="text-align: center;">
+              <img style="width: 300px; border-radius: 20px;margin-right:2px;" src="${imageUrl}" alt="${title}">
+            </div>
+            <div class="card-footer">
+              <a href="${link}" class="external">Read More</a>
+            </div>
+          </div>
+        `;
+
+        
+        newsElement.appendChild(cardElement);
+      }
+    });
