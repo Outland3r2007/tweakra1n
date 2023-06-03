@@ -14,11 +14,11 @@ var apps = [
 // },
   {
       id: "sauce",
-      title: "sauce",
+      title: "sauce ",
       subtitle: "3rd Party App Store",
       icon: "assets/default.png",
-      description: "The 3rd party store for crack addicts.",
-      compatible: "N/A",
+      description: "The 3rd party store for crack addicts. It wouldnt work without repojs and the sideloadstore.me API (all made by puffer)",
+      compatible: "iOS 9 - Current",
       get_link: "https://puffer.is-a.dev/sauce/",
       type: "Website",
       screenshots: [
