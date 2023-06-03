@@ -436,7 +436,7 @@ fetch('https://www.idownloadblog.com/feed/')
         const parser = new DOMParser();
         const mediaDoc = parser.parseFromString(mediaContent, 'text/html');
         const imageElement = mediaDoc.querySelector('img');
-        const imageUrl = imageElement ? imageElement.getAttribute('src') : 'path/to/placeholder-image.png';
+        const imageUrl = imageElement ? imageElement.getAttribute('src') : '#';
 
         
         const cardElement = document.createElement('div');
