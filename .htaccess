@@ -1,0 +1,9 @@
+On
+
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+ErrorDocument 404 /forbidden.html
