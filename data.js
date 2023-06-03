@@ -329,7 +329,7 @@ var apps = [
       get_link: "get_link",
       type: "App",
       screenshots: [
-          "assets/screenshots/altstore.png"
+          "https://altstore.io/images/newmyapp-p-800.png"
       ],
       badge: ""
   },
@@ -566,12 +566,10 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Show the infinite progress dialog
 function showInfiniteProgress() {
-  app.dialog.progress('Refreshing files...', 'infinite');
+  app.dialog.progress('Refreshing files', 'infinite');
 }
 
-// Hide the infinite progress dialog
 function hideInfiniteProgress() {
   app.dialog.close();
 }
@@ -584,7 +582,7 @@ function update() {
       hideInfiniteProgress();
 
       app.dialog.alert('Files successfully refreshed!', 'Success', function() {
-        // Reload the page only if the user presses "OK"
+        
         window.location.reload();
       });
 
