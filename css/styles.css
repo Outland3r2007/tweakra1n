@@ -50,17 +50,17 @@ a {
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
 }
-.navbar-bg{
-  transition:background-color 0.5s,transform 0.5s,opacity 0.5s;
-  will-change:background-color,transform,opacity;
-  transform:translateZ(0);opacity:1}
-}
           ul{
           transition: background-color 1s;
           }
           .toolbar-bottom{
           transition: background-color 1s;
           }
+          .navbar-bg{
+  transition:background-color 0.5s,transform 0.5s,opacity 0.5s;
+  will-change:background-color,transform,opacity;
+  transform:translateZ(0);opacity:1}
+}
 
           img {
     pointer-events: none;
@@ -70,7 +70,7 @@ a {
       margin: 10px;
     }
   .card-opened > .card-content {
-                                              padding-top: 120px;
+                                              padding-top: 100px;
                                                     transition: .5s;
                                                 }
                                  
