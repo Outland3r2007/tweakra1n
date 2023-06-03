@@ -36,8 +36,13 @@ body{
 
           }
           .page {
-  transition: background-color 1s;
+  transition: background-color 1s, transform 1s, opacity 1s;
+  will-change: background-color, transform, opacity;
+  transform: translateZ(0);
+  opacity: 1;
 }
+
+
 a {
   user-select: none;
   -webkit-touch-callout: none;
@@ -49,13 +54,22 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 .navbar-bg{
-          transition: background-color 1s ease;
-          }
+          transition: background-color 1s, transform 1s, opacity 1s;
+  will-change: background-color, transform, opacity;
+  transform: translateZ(0);
+  opacity: 1;
+}
           ul{
-          transition: background-color 1s ease;
+          transition: background-color 1s, transform 1s, opacity 1s;
+  will-change: background-color, transform, opacity;
+  transform: translateZ(0);
+  opacity: 1;
           }
           .toolbar-bottom{
-          transition: background-color 1s ease;
+          transition: background-color 1s, transform 1s, opacity 1s;
+  will-change: background-color, transform, opacity;
+  transform: translateZ(0);
+  opacity: 1;
           }
 
           img {
