@@ -10,6 +10,7 @@
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
   --f7-block-inset-border-radius: 15px;
   --f7-list-inset-border-radius: 15px;
+  --f7-card-border-radius: 20px;
 }
 .ios .color-primary,
 .ios.color-primary {
@@ -25,12 +26,42 @@ body{
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+
           }
+          .page {
+  transition: background-color 1s;
+}
+a {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.navbar-bg{
+          transition: background-color 1s ease;
+          }
+          ul{
+          transition: background-color 1s ease;
+          }
+          .toolbar-bottom{
+          transition: background-color 1s ease;
+          }
+
           img {
     pointer-events: none;
 }
  #system-info {
-      font-family: system-ui;
       padding: 10px;
       margin: 10px;
     }
@@ -38,22 +69,7 @@ body{
                                               padding-top: 120px;
                                                     transition: .5s;
                                                 }
-                                  
-      .slider{
-        display: flex;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: auto;
-      }
-      .slider div{
-        flex-shrink:0;
-        width:85px;
-        height:85px;
-      }
-      .slider img{
-      width:70px;
-      border-radius:15px;
-      margin:5px;
-      }      
+                                 
       .popup{
       border-top-left-radius: 15px;
       border-top-right-radius:15px;
