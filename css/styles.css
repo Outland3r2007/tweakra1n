@@ -57,7 +57,7 @@ a {
           transition: background-color 1s;
           }
           .navbar-bg{
-  transition:background-color 0.5s,transform 0.5s,opacity 0.5s;
+  transition:background-color 1s,transform 0.5s,opacity 0.5s;
   will-change:background-color,transform,opacity;
   transform:translateZ(0);opacity:1}
 }
