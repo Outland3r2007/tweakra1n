@@ -9,7 +9,6 @@ self.addEventListener('install', event => {
         'css/f7.css',
         'css/styles.css',
         'js/app.js',
-        'js/nobounce.js',
         'js/routes.js',
         'assets/default.png',
         './data.js',
@@ -17,6 +16,7 @@ self.addEventListener('install', event => {
         'assets/favicon.ico',
         'manifest.json',
         'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+        'https://cdn.jsdelivr.net/npm/framework7-icons@5.0.5/css/framework7-icons.css',
       ]))
   );
 });
