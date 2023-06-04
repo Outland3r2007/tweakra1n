@@ -1,4 +1,4 @@
-![Artboard](assets/welcome.png)
+![Artboard](assets/favicon.ico)
 # tweakra1n
 The new App Store
 
