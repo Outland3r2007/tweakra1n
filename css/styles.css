@@ -147,4 +147,12 @@ a {
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
      }
-    .popup-swipe-nav{position:absolute;height:30px;z-index:500;left:0;top:0;width:100%;display:flex;align-items:center;justify-content:center;-webkit-backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));background:var(--handler-navbar-bg)}.tr-swipe-handler{--f7-popup-border-radius: 20px 20px 0 0;--f7-block-strong-border-color: transparent;height:calc(100% - var(--f7-navbar-height) - var(--f7-safe-area-top));top:calc(var(--f7-navbar-height) + var(--f7-safe-area-top) + 3%)}.tr-swipe-handler .navbar-bg{background:var(--handler-navbar-bg)}.tr-swipe-handler .navbar{height:30px}
+    .popup-swipe-nav{
+    position:absolute;
+    height:30px;
+    z-index:500;
+    left:0;top:0;
+    width:100%;display:flex;
+    align-items:center;
+    justify-content:center;
+    -webkit-backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));background:var(--handler-navbar-bg)}
