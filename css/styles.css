@@ -18,28 +18,31 @@
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
+img {
+  pointer-events: none;
+}
+.cancel-button {
+  color: red !important;
+}
 body{
  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-   -khtml-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-       -o-user-select: none;
-          user-select: none;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ -o-user-select: none;
+ user-select: none;
+ overflow: auto;
+ -webkit-overflow-scrolling: touch;
+ scrollbar-width: none;
+ -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
-
           }
           .page {
   transition: background-color 1s;
 }
-
-
 a {
   user-select: none;
   -webkit-touch-callout: none;
@@ -61,10 +64,7 @@ a {
   will-change:background-color,transform,opacity;
   transform:translateZ(0);opacity:1}
 }
-
-          img {
-    pointer-events: none;
-}
+          
  #system-info {
       padding: 10px;
       margin: 10px;
@@ -156,3 +156,64 @@ a {
     align-items:center;
     justify-content:center;
     -webkit-backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));backdrop-filter:saturate(180%) blur(var(--f7-bars-translucent-blur));background:var(--handler-navbar-bg)}
+    .newsimg{
+    width:300px;
+    }
+    @media (min-width: 961px) {
+    .toolbar-bottom {
+      display: none;
+    }
+.panel-left {
+  z-index: 15;
+}
+.panel-left .page-content {
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+.app {
+  position: relative;
+}
+.view-main {
+  margin-left: 135px;
+}
+.view-main .page-content {
+  padding-left: 20px;
+}
+.oldnav{
+display: none;
+}
+.popup{
+border-radius:100px;
+}
+.newsimg{
+width:700px;
+}
+a {
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ -o-user-select: none;
+ user-select: none;
+ overflow: auto;
+ -webkit-overflow-scrolling: touch;
+ scrollbar-width: none;
+ -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none; 
+          }
+          img{
+          pointer-events: none;
+          }
