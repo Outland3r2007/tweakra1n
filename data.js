@@ -18,12 +18,26 @@ var apps = [
       subtitle: "3rd Party App Store",
       icon: "assets/default.png",
       description: "The 3rd party store for crack addicts. It wouldnt work without repojs and the sideloadstore.me API (all made by puffer)",
-      compatible: "iOS 9 - Current",
+      compatible: "OS 9 - Latest",
       get_link: "https://puffer.is-a.dev/sauce/",
       type: "Website",
       screenshots: [
       ],
       badge: "checkmark_seal_fill"
+  },
+  {
+      id: "sideloadstore",
+      title: "SideloadStore",
+      subtitle: "3rd Party App Store",
+      icon: "https://sideloadstore.me/img/ssicon.png",
+      description: "No description available.",
+      compatible: "N/A",
+      get_link: "https://sideloadstore.me/home.php",
+      type: "Website",
+      screenshots: [
+      "assets/screenshots/sideloadstore.png"
+      ],
+      badge: ""
   },
   {
       id: "Starfiles",
@@ -43,8 +57,8 @@ var apps = [
       title: "Blacklist",
       subtitle: "MacDirtyCow",
       icon: "assets/blacklist.png",
-      description: "If you're blacklisted and you can't install 3rd Party<br>Apps use this app,it works on iOS",
-      compatible: "iOS 14-15.7.1 and 16.0-16.1.2",
+      description: "If you're blacklisted and you can't install 3rd Party<br>Apps ,use this app,it works on",
+      compatible: "OS 14-15.7.1 and 16.0-16.1.2",
       get_link: "https://appinstallerios.com/TrollStoreIPAs/Blacklist.ipa",
       type: "App/iPA",
       screenshots: [
@@ -177,6 +191,19 @@ var apps = [
           "https://chromahue.dev/wallpapers/home.jpg"
       ],
       badge: "checkmark_seal_fill"
+  },
+  {
+      id: "swa",
+      title: "SWA",
+      subtitle: "Personalization",
+      icon: "assets/swa.png",
+      description: "No description available.",
+      compatible: "N/A",
+      get_link: "https://apps.apple.com/ro/app/smart-wallpaper-art/id6447762747",
+      type: "App",
+      screenshots: [
+      ],
+      badge: ""
   },
   {
       id: "showae",
@@ -391,10 +418,10 @@ var apps = [
       id: "dragonos",
       title: "Drag0nOS",
       subtitle: "3rd Party App Store",
-      icon: "https://www.drag0nos.ga/Img/Drag0nOS.png",
+      icon: "https://drag0nos.github.io/Img/Drag0nOS.png",
       description: "No description available.",
       compatible: "N/A",
-      get_link: "https://drag0nos.ga",
+      get_link: "https://drag0nos.github.io/",
       type: "Website",
       screenshots: [
           "assets/screenshots/dragonos.png"
@@ -421,7 +448,7 @@ var apps = [
       subtitle: "TestFlight",
       icon: "https://app.airport.community/logo2.svg",
       description: "Airport is the best place to discover new TestFlight apps from developers.",
-      compatible: "N/A",
+      compatible: "OS 14.0-Latest",
       get_link: "https://app.airport.community",
       type: "Website",
       screenshots: [
@@ -517,13 +544,12 @@ var apps = [
       id: "sidestore",
       title: "SideStore",
       subtitle: "Sideloading",
-      icon: "https://sidestore.io/apple-touch-icon.0a9d800f.png",
+      icon: "https://pbs.twimg.com/profile_images/1610768676201848833/lvEKBXiS_400x400.jpg",
       description: "AltStore fork that does not require AltServer.",
       compatible: "N/A",
       get_link: "https://sidestore.io",
       type: "Website",
-      screenshots: [
-          "https://sidestore.io/hero_render2.12414c8d.webp"
+      screenshots: [          
       ],
       badge: ""
   },
@@ -543,28 +569,24 @@ var apps = [
   }
 ]
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js')
+  navigator.serviceWorker.getRegistration()
     .then(registration => {
-     
-      console.log('Service Worker registered!');
-
-      var toastSuccess = app.toast.create({
-        text: '<i style="font-size:16px;color:lightgreen;" class="f7-icons ">checkmark_alt_circle_fill</i> Service Worker registered successfully.',
-        closeTimeout: 2000
-      });
-      toastSuccess.open();
-    })
-    .catch(error => {
-     
-      console.error('<i style="font-size:16px;color:red;" class="f7-icons color-red">xmark_circle_fill</i> Service Worker registration failed:', error);
-
-      var toastError = app.toast.create({
-        text: 'Service Worker registration failed.',
-        closeTimeout: 2000
-      });
-      toastError.open();
+      if (registration) {
+        console.log('Service Worker already registered.');
+      } else {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registered!');
+            
+          })
+          .catch(error => {
+            console.error('Service Worker registration failed:', error);
+            
+          });
+      }
     });
 }
+
 
 function showInfiniteProgress() {
   app.dialog.progress('Refreshing files', 'infinite');
