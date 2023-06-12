@@ -10,16 +10,13 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   let frames = _____WB$wombat$assign$function_____("frames");
   let opener = _____WB$wombat$assign$function_____("opener");
 
-// Dom7
 var $ = Dom7;
 
-// Theme
-var theme = 'auto';
+var theme = 'ios';
 if (document.location.search.indexOf('theme=') >= 0) {
     theme = document.location.search.split('theme=')[1].split('&')[0];
 }
 
-// Initialise App
 var app = new Framework7({
     id: 'com.Outlander.tweakra1n',
     root: '#app',
@@ -91,9 +88,6 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false,
       },
 });
-function redirectToURL(url) {
-  window.location.href = url;
-}
 //Old navbar
 function tabbar() {
 	
@@ -179,29 +173,76 @@ if (animationPreference === 'disabled') {
 }
 // Reset
 function reset() {
-  app.dialog.confirm(
-    "Are you sure you want to reset tweakra1n?",
-    "Reset",
-    () => {
-      app.dialog.progress('Resetting...', 'infinite'); // Show the infinite progress dialog
+  app.actions.create({
+    buttons: [
+      
+      [
+        {
+          text: 'Reset Accent Color',
+          onClick: function() {
+            
+            document.documentElement.style.setProperty('--f7-ios-primary', '#3E84F6');
+            document.documentElement.style.setProperty('--f7-ios-primary-shade', '#3E84F6');
+            document.documentElement.style.setProperty('--f7-ios-primary-tint', '#3E84F6');
 
-      setTimeout(() => {
-        var cookies = document.cookie.split(";");
-        for (var i = 0; i < cookies.length; i++) {
-          var cookie = cookies[i];
-          var eqPos = cookie.indexOf("=");
-          var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-          document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            const defaultColor = '#3E84F6';
+            colorPicker.value = defaultColor;
+            updateAccentColor(defaultColor);
+
+            localStorage.setItem('accentColor', '#3E84F6');
+          }
+        },
+        {
+          text: 'Reset All Preferences',
+          onClick: function() {
+            
+            app.dialog.confirm(
+              "Are you sure you want to reset tweakra1n?",
+              "Reset",
+              () => {
+                app.dialog.progress('Resetting', 'infinite');
+                setTimeout(() => {
+                  var cookies = document.cookie.split(";");
+                  for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i];
+                    var eqPos = cookie.indexOf("=");
+                    var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+                  }
+
+                  localStorage.clear();
+
+                  hideInfiniteProgress();
+
+                  window.location.href = "app.html";
+                }, 3000);
+              }
+            );
+          }
         }
-
-        localStorage.clear();
-
-        hideInfiniteProgress(); // Hide the infinite progress dialog
-        window.location.href = "app.html";
-      }, 3000);
-    }
-  );
+      ],
+      
+      [
+        {
+          text: 'Cancel',
+          onClick: function() {
+       
+          }
+        }
+      ]
+    ]
+  }).open();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var savedAccentColor = localStorage.getItem('accentColor');
+
+  if (savedAccentColor) {
+    document.documentElement.style.setProperty('--f7-ios-primary', savedAccentColor);
+    document.documentElement.style.setProperty('--f7-ios-primary-shade', savedAccentColor);
+    document.documentElement.style.setProperty('--f7-ios-primary-tint', savedAccentColor);
+  }
+});
 
 //Use in web
 function hs() {
@@ -262,77 +303,35 @@ function toggleDarkMode() {
                                                             applyDarkModeSetting();
                                            
 // Accent color
-function color() {
-	
-}
-var colors = [
-  { name: 'Default', value: '#3E84F6' },
-  { name: 'Red', value: '#FF6347' },
-  { name: 'Green', value: '#32CD32' },
-  { name: 'Orange', value: 'orange' },
-  { name: 'Pink', value: 'pink' },
-  { name: 'Grey', value: 'grey' }
-];
+const colorPicker = document.getElementById('colorPicker');
 
-var colorButton = document.querySelector('.open-color-picker');
-var colorPicker = null;
+ 
+  const defaultColor = '#3E84F6';
+  colorPicker.value = defaultColor;
+  updateAccentColor(defaultColor);
 
-function initializeColorPicker() {
   
-  colorPicker = app.picker.create({
-    openIn: 'auto',
-    inputEl: colorButton,
-    rotateEffect: true,
-    sheetPush: true,
-    sheetSwipeToClose: true,
-    cols: [
-      {
-        textAlign: 'center',
-        values: colors.map(function (color) {
-          return color.name;
-        }),
-        displayValues: colors.map(function (color) {
-          return color.name;
-        })
-      }
-    ],
-    on: {
-      change: function (picker, values) {
-        var selectedColor = colors.find(function (color) {
-          return color.name === values[0];
-        });
+  const savedColor = localStorage.getItem('accentColor');
+  if (savedColor) {
+    colorPicker.value = savedColor;
+    updateAccentColor(savedColor);
+  }
 
-        if (selectedColor) {
-          document.documentElement.style.setProperty('--f7-ios-primary', selectedColor.value);
-          document.documentElement.style.setProperty('--f7-ios-primary-shade', selectedColor.value);
-          document.documentElement.style.setProperty('--f7-ios-primary-tint', selectedColor.value);
-
-          localStorage.setItem('colorPreference', selectedColor.value);
-        }
-      }
-    }
+  
+  colorPicker.addEventListener('change', function(event) {
+    const selectedColor = event.target.value;
+    updateAccentColor(selectedColor);
+    localStorage.setItem('accentColor', selectedColor); 
   });
 
-  var savedColor = localStorage.getItem('colorPreference');
-  if (savedColor) {
-    document.documentElement.style.setProperty('--f7-ios-primary', savedColor);
-    document.documentElement.style.setProperty('--f7-ios-primary-shade', savedColor);
-    document.documentElement.style.setProperty('--f7-ios-primary-tint', savedColor);
-    colorPicker.setValue([colors.find(function (color) { return color.value === savedColor; }).name]);
+ 
+  function updateAccentColor(color) {
+    document.documentElement.style.setProperty('--f7-ios-primary', color);
+    document.documentElement.style.setProperty('--f7-ios-primary-shade', color);
+    document.documentElement.style.setProperty('--f7-ios-primary-tint', color);
+    document.querySelector('.color-picker-indicator').style.backgroundColor = color;
   }
-}
 
-function color() {
-  if (colorPicker === null) {
-    initializeColorPicker();
-  } else {
-    colorPicker.open();
-  }
-}
-
-colorButton.addEventListener('click', color);
-
-initializeColorPicker();
 
 //Font
 function font() {
@@ -402,22 +401,10 @@ function handleButtonClick() {
 fontButton.addEventListener('click', handleButtonClick);
 
 initializeFontPicker();
+//Add to HS required
+if(window.navigator&&window.navigator.standalone){var preloaderDialog=app.dialog.preloader('Reloading data');preloaderDialog.open();setTimeout(function(){preloaderDialog.close();},2000);}else{app.popup.open('#hs');}
 
-if (window.navigator && window.navigator.standalone) {
-//Preloader
-var preloaderDialog = app.dialog.preloader('Reloading data');
-
-preloaderDialog.open();
-
-setTimeout(function() {
-  preloaderDialog.close();
-}, 3300);
-
-} else {
-   app.popup.open('#hs');
-
-}
-
+//Newsfeed
 fetch('https://www.idownloadblog.com/feed/')
     .then(response => response.text())
     .then(data => {
@@ -446,7 +433,7 @@ fetch('https://www.idownloadblog.com/feed/')
           <div class="card-content card-content-padding">
             <div class="card-header">${title}</div>
             <div class="card-image animated fadeIn" style="text-align: center;">
-              <img style="width: 300px; border-radius: 20px;margin-right:2px;" src="${imageUrl}" alt="${title}">
+              <img class="newsimg" style="border-radius: 20px;margin-right:2px;" src="${imageUrl}" alt="${title}">
             </div>
             <div class="card-footer">
               <a href="${link}" class="external">Read More</a>
@@ -458,6 +445,7 @@ fetch('https://www.idownloadblog.com/feed/')
         newsElement.appendChild(cardElement);
       }
     });
+    //iNoBounce
     (function(global) {
 	
 	var startY = 0;
@@ -590,3 +578,71 @@ fetch('https://www.idownloadblog.com/feed/')
 }(this));
 
 ;
+//Pull-to-refresh
+document.addEventListener('DOMContentLoaded', function () {
+  var ptrContents = document.querySelectorAll('.ptr-content');
+
+  ptrContents.forEach(function (ptrContent) {
+    ptrContent.addEventListener('ptr:refresh', function (event) {
+      
+      window.location.reload();
+    });
+  });
+});
+//hs pop-up
+var popupHs = app.popup.get('#hs');
+if (popupHs) {
+  popupHs.params.swipeToClose = false;
+}
+
+var myDate = new Date();
+                                                    var hrs = myDate.getHours();
+
+                                                    var greet;
+
+                                                    if (hrs < 12)
+                                                        greet = 'Good Morning ☀️';
+                                                    else if (hrs >= 12 && hrs <= 17)
+                                                        greet = 'Good Afternoon 🥱';
+                                                    else if (hrs >= 17 && hrs <= 24)
+                                                        greet = 'Good Evening 🌙';
+
+                                                    document.getElementById('greetings').innerHTML = '<b>' + greet + '</b>';
+//Sidebar
+var sidebarLinks = document.querySelectorAll('.menu-list a.item-link');
+sidebarLinks.forEach(function(link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    
+    sidebarLinks.forEach(function(otherLink) {
+      otherLink.classList.remove('item-selected');
+    });
+
+    
+    link.classList.add('item-selected');
+
+   
+    var tabId = link.getAttribute('href');
+
+    
+    var tabContent = document.querySelector(tabId);
+    if (tabContent) {
+      
+      var allTabs = document.querySelectorAll('.tab');
+      allTabs.forEach(function(tab) {
+        tab.classList.remove('tab-active');
+      });
+
+      
+      tabContent.classList.add('tab-active');
+    }
+
+    var sidebar = document.querySelector('.panel-left');
+    if (sidebar && sidebar.classList.contains('panel-visible')) {
+      sidebar.classList.remove('panel-visible');
+    }
+  });
+});
+
+                                         
