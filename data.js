@@ -59,7 +59,7 @@ var apps = [
       icon: "assets/blacklist.png",
       description: "If you're blacklisted and you can't install 3rd Party<br>Apps ,use this app,it works on",
       compatible: "OS 14-15.7.1 and 16.0-16.1.2",
-      get_link: "https://appinstallerios.com/TrollStoreIPAs/Blacklist.ipa",
+      get_link: "https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
       type: "App/iPA",
       screenshots: [
           "assets/screenshots/blacklist.png"
@@ -124,6 +124,30 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
+      id: "dopamine",
+      title: "Dopamine",
+      subtitle: "Jailbreak",
+      icon: "https://ellekit.space/dopamine/assets/icon.png",
+      description: "No description available.",
+      compatible: "iOS 15.0 - 15.4.1 • A12 - A15, M1",
+      get_link: "https://ellekit.space/dopamine/",
+      screenshots: [
+      ],
+      badge: "exclamationmark_triangle_fill"
+  },
+ {
+      id: "palera1n",
+      title: "palera1n",
+      subtitle: "Jailbreak",
+      icon: "https://pbs.twimg.com/profile_images/1577678004079173635/izmSVNaL_400x400.jpg",
+      description: "palera1n is a developer-oriented jailbreak for checkm8 devices (A8-A11)",
+      compatible: "iOS 15.0 - Latest •A8-A11",
+      get_link: "https://palera.in",
+      screenshots: [
+      ],
+      badge: "exclamationmark_triangle_fill"
+  },
+  {
       id: "ithunder",
       title: "iThunder",
       subtitle: "3rd Party App Store",
@@ -148,6 +172,20 @@ var apps = [
       type: "Website",
       screenshots: [
           "https://eclipseemu.me/web_based.webp"
+      ],
+      badge: ""
+  },
+  {
+      id: "calculator",
+      title: "Calculator ",
+      subtitle: "Uncategorized",
+      icon: "https://lake-e.github.io/iPad-Calculator/images/icon.png",
+      description: "Calculator for iPad",
+      compatible: "All versions",
+      get_link: "https://lake-e.github.io/iPad-Calculator/index.html",
+      type: "Website",
+      screenshots: [
+      "https://raw.githubusercontent.com/Lake-e/iPad-Calculator/main/images/calculator-screenshot-1.jpeg"
       ],
       badge: ""
   },
