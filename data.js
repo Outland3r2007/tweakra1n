@@ -131,6 +131,7 @@ var apps = [
       description: "No description available.",
       compatible: "iOS 15.0 - 15.4.1 • A12 - A15, M1",
       get_link: "https://ellekit.space/dopamine/",
+      type: "App",
       screenshots: [
       ],
       badge: "exclamationmark_triangle_fill"
@@ -143,6 +144,7 @@ var apps = [
       description: "palera1n is a developer-oriented jailbreak for checkm8 devices (A8-A11)",
       compatible: "iOS 15.0 - Latest •A8-A11",
       get_link: "https://palera.in",
+      type: "N/A",
       screenshots: [
       ],
       badge: "exclamationmark_triangle_fill"
