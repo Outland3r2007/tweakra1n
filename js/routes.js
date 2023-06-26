@@ -10,12 +10,17 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
   let frames = _____WB$wombat$assign$function_____("frames");
   let opener = _____WB$wombat$assign$function_____("opener");
 
-var routes = [{
+var routes = [
+  {
     path: '/',
     url: './index.html',
-    name: 'index',
+    name: 'index'
+  },
+  {
+    path: '/app/',
     url: './app.html',
-    name: 'app',
-}];
+    name: 'app'
+  }
+];
 
 }

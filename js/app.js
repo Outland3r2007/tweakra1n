@@ -402,7 +402,57 @@ fontButton.addEventListener('click', handleButtonClick);
 
 initializeFontPicker();
 //Add to HS required
-if(window.navigator&&window.navigator.standalone){var preloaderDialog=app.dialog.preloader('Reloading data');preloaderDialog.open();setTimeout(function(){preloaderDialog.close();},2000);}else{app.popup.open('#hs');}
+if(window.navigator&&window.navigator.standalone){var preloaderDialog=app.dialog.preloader('Reloading data');preloaderDialog.open();setTimeout(function(){preloaderDialog.close();},2000);}else{var popupHTML = `
+  <div class="popup" id="hs" style="margin-top:0px;border-radius:0px;">                                                                                                    <div class="page">                                                                                                          <div class="page-content animated fadeIn">                                                                                   <div class="block block-strong inset">
+               <div class="block-title block-title-large animated zoomIn">Add to HomeScreen</div>                                                                                                                                         
+                  <p class="animated bounceIn">To use tweakra1n you need to add it to your HomeScreen.</p>
+                </div>
+            <div class="list list-strong inset">
+              <ul class="animated flipInY">
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <i style="font-size: 35px" class="f7-icons">compass</i>
+                    </div>
+                    <div class="item-inner">Open this webpage in Safari</div>
+                  </div>
+                </li>
+                </ul>
+                <p>
+                <ul class="animated flipInY">
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <i style="font-size: 35px" class="f7-icons">square_arrow_up</i>
+                    </div>
+                    <div class="item-inner">Click the "Share" button</div>
+                  </div>
+                </li>
+                </ul>
+                <p>
+                 <ul class="animated flipInY">
+                <li>
+                  <div class="item-content">
+                    <div class="item-media">
+                      <i style="font-size: 35px" class="f7-icons">plus_app</i>
+                    </div>
+                    <div class="item-inner">
+                      and tap "Add to Home Screen"
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p>
+            <a href="javascript:hs()" class="button button-raised button-fill">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div> 
+`;
+
+
+var popup = app.popup.create({
+  content: popupHTML
+});
+
+popup.open();
+}
 
 //Newsfeed
 fetch('https://www.idownloadblog.com/feed/')
@@ -644,5 +694,142 @@ sidebarLinks.forEach(function(link) {
     }
   });
 });
+// Signer
+function sign() {
+app.dialog.prompt('Enter a direct link to the .ipa file', 'Sign app', function (url) {
+  app.dialog.create({
+        title: 'Sign app',
+        buttons: [
+          {
+            text: 'Install',
+            onClick: function () {
+           var finalUrl = 'https://sign.cococloud-drive.com/free-plist?url=' + encodeURIComponent(url);
+  window.open(finalUrl, '_blank');
+  app.dialog.alert('Go to your homescreen to check the installation progress', 'Installing');
+        },
+          },
+          {
+            text: 'Download',
+            onClick: function () {
+            var finalUrl = 'https://sign.cococloud-drive.com/free-signing?url=' + encodeURIComponent(url);
+  window.open(finalUrl, '_blank');
+        },
+          },
+          {
+            text: 'Cancel',
+          },
+        ],
+        verticalButtons: true,
+      }).open();
+});
 
-                                         
+}
+    var isAlertShown = false;
+
+    
+    function checkInternetConnection() {
+      return navigator.onLine;
+    }
+
+    
+    function displayNoInternetAlert() {
+      app.dialog.alert('Some features will not be available', 'No connection <i style="font-size:20px;" class="f7-icons">wifi_slash</i>');
+      isAlertShown = true;
+    }
+
+   
+    function checkNetworkStatus() {
+      if (!checkInternetConnection() && !isAlertShown) {
+        displayNoInternetAlert();
+      }
+    }
+
+    
+    checkNetworkStatus();
+
+   
+    setInterval(checkNetworkStatus, 1000);
+    
+    
+   // Send feedback
+var feedbackForm = document.getElementById('feedback-form');
+feedbackForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+ 
+  var emailInput = feedbackForm.elements.email;
+  var feedbackTypeInput = feedbackForm.elements['feedback-type'];
+  var feedbackInput = feedbackForm.elements.feedback;
+
+  if (
+    emailInput.value === '' ||
+    feedbackTypeInput.value === '' ||
+    feedbackInput.value === ''
+  ) {
+    
+    app.dialog.alert('Please fill in all the required fields.', 'Cannot submit');
+    return;
+  }
+
+  var mailtoURL =
+    'mailto:baloggabriel76@outlook.com' +
+    '?subject=' + encodeURIComponent('New Feedback') +
+    '&body=' + encodeURIComponent('Email: ' + emailInput.value + '\n' +
+      'Feedback Type: ' + feedbackTypeInput.value + '\n' +
+      'Feedback: ' + feedbackInput.value
+    );
+
+ 
+  window.location.href = mailtoURL;
+
+  feedbackForm.reset();
+
+  app.popup.close('#feedback');
+
+  app.dialog.alert('Thanks for sending feedback.This will help us improve tweakra1n better.', 'Thank you!');
+});
+
+// Submit app
+var appSubmitForm = document.getElementById('appsubmit-form');
+appSubmitForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  
+  var emailInput = appSubmitForm.elements.email;
+  var appNameInput = appSubmitForm.elements['app-name'];
+  var appUrlInput = appSubmitForm.elements['app-url'];
+  var descriptionInput = appSubmitForm.elements.description;
+
+  if (
+    emailInput.value === '' ||
+    appNameInput.value === '' ||
+    appUrlInput.value === '' ||
+    descriptionInput.value === ''
+  ) {
+    
+    app.dialog.alert('Please fill in all the required fields.', 'Cannot submit');
+    return;
+  }
+
+
+  var mailtoURL =
+    'mailto:baloggabriel76@outlook' +
+    '?subject=' + encodeURIComponent('New App Submission') +
+    '&body=' + encodeURIComponent('Email: ' + emailInput.value + '\n' +
+      'App Name: ' + appNameInput.value + '\n' +
+      'App URL: ' + appUrlInput.value + '\n' +
+      'Description: ' + descriptionInput.value + '\n' +
+      'Additional Content: ' + appSubmitForm.elements['additional-content'].value
+    );
+
+  
+  window.location.href = mailtoURL;
+
+ 
+  appSubmitForm.reset();
+
+  
+  app.popup.close('#appsubmit');
+  
+   app.dialog.alert('We will review your app soon.', 'Thank you!');
+});
