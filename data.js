@@ -59,10 +59,24 @@ var apps = [
       icon: "assets/blacklist.png",
       description: "If you're blacklisted and you can't install 3rd Party<br>Apps ,use this app,it works on",
       compatible: "OS 14-15.7.1 and 16.0-16.1.2",
-      get_link: "https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
+      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
       type: "App/iPA",
       screenshots: [
           "assets/screenshots/blacklist.png"
+      ],
+      badge: ""
+  },
+  {
+      id: "cowabunga",
+      title: "Cowabunga",
+      subtitle: "MacDirtyCow",
+      icon: "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
+      description: "MacDirtyCow Toolbox",
+      compatible: "OS 14-15.7.1 and 16.0-16.1.2",
+      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+      type: "App/iPA",
+      screenshots: [
+          "https://github.com/leminlimez/Cowabunga/blob/main/Images/Home.PNG?raw=true"
       ],
       badge: ""
   },
@@ -73,7 +87,7 @@ var apps = [
       icon: "assets/appbox.png",
       description: "Find apps within minutes without ads, paywalls or subscriptions.",
       compatible: "N/A",
-      get_link: "https://appbox.click",
+      get_link: "https://app.appbox.click",
       type: "Website",
       screenshots: [
           "assets/screenshots/appbox.png"
@@ -101,7 +115,7 @@ var apps = [
       icon: "https://www.eonhubapp.com/assets/icon.png",
       description: "Simple, Easy, EonHub.<br>One of the best 3rd Party App Stores with Blacklist protection.",
       compatible: "N/A",
-      get_link: "https://eonhubapp.com",
+      get_link: "https://app.eonhubapp.com",
       type: "Website",
       screenshots: [
           "assets/screenshots/eonhub1.png",
@@ -124,6 +138,24 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
+      id: "oldos",
+      title: "OldOS",
+      subtitle: "Emulator",
+      icon: "https://pbs.twimg.com/profile_images/1416783489106591746/DGy5_hww_400x400.jpg",
+      description: "iOS 4 beautifully rebuilt in SwiftUI",
+      compatible: "OS 14-Latest",
+      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/zzanehip/The-OldOS-Project/releases/download/1.0_18/OldOS.ipa",
+      type: "App/iPA",
+      screenshots: [
+          "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_1.jpg?raw=true",
+          "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_2.jpg?raw=true",
+          "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_3.jpg?raw=true",
+          "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_4.jpg?raw=true",
+          "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_5.jpg?raw=true"
+      ],
+      badge: ""
+  },
+  {
       id: "dopamine",
       title: "Dopamine",
       subtitle: "Jailbreak",
@@ -140,7 +172,7 @@ var apps = [
       id: "palera1n",
       title: "palera1n",
       subtitle: "Jailbreak",
-      icon: "https://pbs.twimg.com/profile_images/1577678004079173635/izmSVNaL_400x400.jpg",
+      icon: "https://pbs.twimg.com/profile_images/1669796450467983361/5EPZFPui_400x400.jpg",
       description: "palera1n is a developer-oriented jailbreak for checkm8 devices (A8-A11)",
       compatible: "iOS 15.0 - Latest •A8-A11",
       get_link: "https://palera.in",
@@ -156,7 +188,7 @@ var apps = [
       icon: "https://pbs.twimg.com/profile_images/1627714387061374994/b5b9sJk0_400x400.jpg",
       description: "No description available.",
       compatible: "N/A",
-      get_link: "https://ithunder.co",
+      get_link: "itms-services://?action=download-manifest&url=https://ithunder.co/Install",
       type: "App",
       screenshots: [
           "assets/screenshots/ithunder.png"
@@ -198,7 +230,7 @@ var apps = [
       icon: "assets/dzmoha.png",
       description: "No description available.",
       compatible: "N/A",
-      get_link: "https://dzmohaipa.com",
+      get_link: "itms-services://?action=download-manifest&url=https://dzmohaipa.com/Snapchat/StoreDz.plist",
       type: "Website",
       screenshots: [
       ],
@@ -387,6 +419,20 @@ var apps = [
       badge: ""
   },
   {
+      id: "sileodemo",
+      title: "Sileo Demo",
+      subtitle: "Uncategorized",
+      icon: "https://getsileo.app/img/icon.png",
+      description: "Unpack the full potential of your iDevice.",
+      compatible: "N/A",
+      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/Sileo/Sileo/releases/download/2.3/sileo_demo_2.3.ipa",
+      type: "App",
+      screenshots: [
+          "https://getsileo.app/img/comp-dark.png"
+      ],
+      badge: ""
+  },
+  {
       id: "altstore",
       title: "AltStore",
       subtitle: "Sideloading",
@@ -421,7 +467,7 @@ var apps = [
       icon: "https://www.postbox.news/assets/images/appIconSite.webp",
       description: "PostBox brings the latest jailbreak news to your fingertips. Use PostBox to access your favorite packages and repositories while unjailbroken, all without the hassle of constantly searching on the web. With in-app .deb download and extraction, you can install themes using only your phone.",
       compatible: "N/A",
-      get_link: "https://postbox.news",
+      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/PostBox-Team/PostBox-Releases/releases/download/beta-8.1/PostBox-0.8.1-beta.ipa",
       type: "App",
       screenshots: [
           "assets/screenshots/postbox.png"
