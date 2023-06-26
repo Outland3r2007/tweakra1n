@@ -18,6 +18,15 @@
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
+.signeddot{
+background-color:#64C466;
+/*Signed: #64C466*/
+/*Revoked: red*/
+float:right;
+width:23px;
+height:23px;
+border-radius:30px;
+}
 img {
   pointer-events: none;
 }
