@@ -703,7 +703,7 @@ app.dialog.prompt('Enter a direct link to the .ipa file', 'Sign app', function (
           {
             text: 'Install',
             onClick: function () {
-           var finalUrl = 'https://sign.cococloud-drive.com/free-plist?url=' + encodeURIComponent(url);
+           var finalUrl = 'https://cococloud-signing.online/free-plist?url=' + encodeURIComponent(url);
   window.open(finalUrl, '_blank');
   app.dialog.alert('Go to your homescreen to check the installation progress', 'Installing');
         },
@@ -711,7 +711,7 @@ app.dialog.prompt('Enter a direct link to the .ipa file', 'Sign app', function (
           {
             text: 'Download',
             onClick: function () {
-            var finalUrl = 'https://sign.cococloud-drive.com/free-signing?url=' + encodeURIComponent(url);
+            var finalUrl = 'https://cococloud-signing.online/free-signing?url=' + encodeURIComponent(url);
   window.open(finalUrl, '_blank');
         },
           },
