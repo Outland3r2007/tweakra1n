@@ -59,7 +59,7 @@ var apps = [
       icon: "assets/blacklist.png",
       description: "If you're blacklisted and you can't install 3rd Party<br>Apps ,use this app,it works on",
       compatible: "OS 14-15.7.1 and 16.0-16.1.2",
-      get_link: "https://cococloud-signing.online/free-plist?url==https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
       type: "App/iPA",
       screenshots: [
           "assets/screenshots/blacklist.png"
