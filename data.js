@@ -59,7 +59,7 @@ var apps = [
       icon: "assets/blacklist.png",
       description: "If you're blacklisted and you can't install 3rd Party<br>Apps ,use this app,it works on",
       compatible: "OS 14-15.7.1 and 16.0-16.1.2",
-      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url==https://github.com/BenjaminHornbeck6/TrollStoreIPAs/raw/main/Blacklist.ipa",
       type: "App/iPA",
       screenshots: [
           "assets/screenshots/blacklist.png"
@@ -73,7 +73,7 @@ var apps = [
       icon: "https://user-images.githubusercontent.com/52459150/215552092-9dc1e029-da35-43da-867f-17279e3dc180.png",
       description: "MacDirtyCow Toolbox",
       compatible: "OS 14-15.7.1 and 16.0-16.1.2",
-      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
       type: "App/iPA",
       screenshots: [
           "https://github.com/leminlimez/Cowabunga/blob/main/Images/Home.PNG?raw=true"
@@ -144,7 +144,7 @@ var apps = [
       icon: "https://pbs.twimg.com/profile_images/1416783489106591746/DGy5_hww_400x400.jpg",
       description: "iOS 4 beautifully rebuilt in SwiftUI",
       compatible: "OS 14-Latest",
-      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/zzanehip/The-OldOS-Project/releases/download/1.0_18/OldOS.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/zzanehip/The-OldOS-Project/releases/download/1.0_18/OldOS.ipa",
       type: "App/iPA",
       screenshots: [
           "https://github.com/zzanehip/The-OldOS-Project/blob/master/Images/Market_1.jpg?raw=true",
@@ -425,7 +425,7 @@ var apps = [
       icon: "https://getsileo.app/img/icon.png",
       description: "Unpack the full potential of your iDevice.",
       compatible: "N/A",
-      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/Sileo/Sileo/releases/download/2.3/sileo_demo_2.3.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/Sileo/Sileo/releases/download/2.3/sileo_demo_2.3.ipa",
       type: "App",
       screenshots: [
           "https://getsileo.app/img/comp-dark.png"
@@ -467,7 +467,7 @@ var apps = [
       icon: "https://www.postbox.news/assets/images/appIconSite.webp",
       description: "PostBox brings the latest jailbreak news to your fingertips. Use PostBox to access your favorite packages and repositories while unjailbroken, all without the hassle of constantly searching on the web. With in-app .deb download and extraction, you can install themes using only your phone.",
       compatible: "N/A",
-      get_link: "https://sign.cococloud-drive.com/free-plist?url=https://github.com/PostBox-Team/PostBox-Releases/releases/download/beta-8.1/PostBox-0.8.1-beta.ipa",
+      get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/PostBox-Team/PostBox-Releases/releases/download/beta-8.1/PostBox-0.8.1-beta.ipa",
       type: "App",
       screenshots: [
           "assets/screenshots/postbox.png"
