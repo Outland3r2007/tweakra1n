@@ -14,7 +14,7 @@ var apps = [
 // },
   {
       id: "appinstallerios",
-      title: "AppInstalleriOS ",
+      title: "AI iOS ",
       subtitle: "3rd Party App Store",
       icon: "https://pbs.twimg.com/profile_images/1632875543673577472/ivrCJwSA_400x400.jpg",
       description: "Welcome to AppInstalleriOS",
@@ -39,6 +39,19 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
+      id: "cypwnipa",
+      title: "CyPwniPA",
+      subtitle: "iPA Library",
+      icon: "https://ipa.cypwn.xyz/serve/icons/CyPwn_Store.png",
+      description: "No description available.",
+      compatible: "N/A",
+      get_link: "https://ipa.cypwn.xyz",
+      type: "Website",
+      screenshots: [
+      ],
+      badge: ""
+  },
+  {
       id: "sideloadstore",
       title: "SideloadStore",
       subtitle: "3rd Party App Store",
@@ -60,6 +73,19 @@ var apps = [
       description: "The biggest iPA Library and file sharing service.",
       compatible: "N/A",
       get_link: "https://starfiles.co",
+      type: "Website",
+      screenshots: [
+      ],
+      badge: ""
+  },
+  {
+      id: "appdb",
+      title: "AppDB",
+      subtitle: "Sideloading",
+      icon: "https://pbs.twimg.com/profile_images/1306156975496089606/fy94yrEY_400x400.png",
+      description: "No description available.",
+      compatible: "N/A",
+      get_link: "https://appdb.to",
       type: "Website",
       screenshots: [
       ],
@@ -204,7 +230,7 @@ var apps = [
       get_link: "https://eclipseemu.me/play",
       type: "Website",
       screenshots: [
-          "https://eclipseemu.me/web_based.webp"
+          "https://eclipseemu.me/Website_based.Websitep"
       ],
       badge: ""
   },
@@ -376,16 +402,16 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
-      id: "iwebappstore",
-      title: "iWebAppStore",
+      id: "iWebsitestore",
+      title: "iWebsiteStore",
       subtitle: "PWA AppStore",
-      icon: "assets/iwebappstore.png",
+      icon: "assets/iWebsitestore.png",
       description: "No description available.",
       compatible: "N/A",
-      get_link: "https://enzo-zsh.github.io/iWebAppStore/",
+      get_link: "https://enzo-zsh.github.io/iWebsiteStore/",
       type: "Website",
       screenshots: [
-          "assets/screenshots/iwebappstore.png"
+          "assets/screenshots/iWebsitestore.png"
       ],
       badge: ""
   },
@@ -463,8 +489,8 @@ var apps = [
       id: "postbox",
       title: "PostBox",
       subtitle: "Uncategorized",
-      icon: "https://www.postbox.news/assets/images/appIconSite.webp",
-      description: "PostBox brings the latest jailbreak news to your fingertips. Use PostBox to access your favorite packages and repositories while unjailbroken, all without the hassle of constantly searching on the web. With in-app .deb download and extraction, you can install themes using only your phone.",
+      icon: "https://www.postbox.news/assets/images/appIconSite.Websitep",
+      description: "PostBox brings the latest jailbreak news to your fingertips. Use PostBox to access your favorite packages and repositories while unjailbroken, all without the hassle of constantly searching on the Website. With in-app .deb download and extraction, you can install themes using only your phone.",
       compatible: "N/A",
       get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/PostBox-Team/PostBox-Releases/releases/download/beta-8.1/PostBox-0.8.1-beta.ipa",
       type: "App",
@@ -576,7 +602,7 @@ var apps = [
       icon: "https://www.cokernutx.com/coker/img/icon.png",
       description: "CokernutX is a new integrated application download platform, including IOS, Android, IOS jailbreak, MAC and other platforms. CokernutX will always be Free and there are over 1 Million users worldwide.",
       compatible: "N/A",
-      get_link: "https://www.cokernutx.com/mobileIndexWeb.php",
+      get_link: "https://www.cokernutx.com/mobileIndexWebsite.php",
       type: "Website",
       screenshots: [
           "assets/screenshots/cokernutx.png"
