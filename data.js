@@ -405,7 +405,7 @@ var apps = [
       id: "iWebAppstore",
       title: "iWebAppStore",
       subtitle: "PWA AppStore",
-      icon: "assets/iWebAppstore.png",
+      icon: "assets/iwebAppstore.png",
       description: "No description available.",
       compatible: "N/A",
       get_link: "https://enzo-zsh.github.io/iWebAppStore/",
