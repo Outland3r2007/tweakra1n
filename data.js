@@ -402,16 +402,16 @@ var apps = [
       badge: "checkmark_seal_fill"
   },
   {
-      id: "iWebsitestore",
-      title: "iWebsiteStore",
+      id: "iWebAppstore",
+      title: "iWebAppStore",
       subtitle: "PWA AppStore",
-      icon: "assets/iWebsitestore.png",
+      icon: "assets/iWebAppstore.png",
       description: "No description available.",
       compatible: "N/A",
-      get_link: "https://enzo-zsh.github.io/iWebsiteStore/",
+      get_link: "https://enzo-zsh.github.io/iWebAppStore/",
       type: "Website",
       screenshots: [
-          "assets/screenshots/iWebsitestore.png"
+          "assets/screenshots/iwebappstore.png"
       ],
       badge: ""
   },
@@ -489,7 +489,7 @@ var apps = [
       id: "postbox",
       title: "PostBox",
       subtitle: "Uncategorized",
-      icon: "https://www.postbox.news/assets/images/appIconSite.Websitep",
+      icon: "https://www.postbox.news/assets/images/appIconSite.webp",
       description: "PostBox brings the latest jailbreak news to your fingertips. Use PostBox to access your favorite packages and repositories while unjailbroken, all without the hassle of constantly searching on the Website. With in-app .deb download and extraction, you can install themes using only your phone.",
       compatible: "N/A",
       get_link: "https://cococloud-signing.online/free-plist?url=https://github.com/PostBox-Team/PostBox-Releases/releases/download/beta-8.1/PostBox-0.8.1-beta.ipa",
