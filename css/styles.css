@@ -30,9 +30,6 @@ border-radius:30px;
 img {
   pointer-events: none;
 }
-.cancel-button {
-  color: red !important;
-}
 body{
  -webkit-touch-callout: none;
  -webkit-user-select: none;
