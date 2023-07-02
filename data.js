@@ -13,6 +13,19 @@ var apps = [
 //     badge: ""
 // },
   {
+      id: "appinstallerios",
+      title: "AppInstalleriOS ",
+      subtitle: "3rd Party App Store",
+      icon: "https://pbs.twimg.com/profile_images/1632875543673577472/ivrCJwSA_400x400.jpg",
+      description: "Welcome to AppInstalleriOS",
+      compatible: "N/A",
+      get_link: "https://benjaminhornbeck6.github.io",
+      type: "Website",
+      screenshots: [
+      ],
+      badge: "checkmark_seal_fill"
+  },
+  {
       id: "sauce",
       title: "sauce ",
       subtitle: "3rd Party App Store",
@@ -180,20 +193,6 @@ var apps = [
       screenshots: [
       ],
       badge: "exclamationmark_triangle_fill"
-  },
-  {
-      id: "ithunder",
-      title: "iThunder",
-      subtitle: "3rd Party App Store",
-      icon: "https://pbs.twimg.com/profile_images/1627714387061374994/b5b9sJk0_400x400.jpg",
-      description: "No description available.",
-      compatible: "N/A",
-      get_link: "itms-services://?action=download-manifest&url=https://ithunder.co/Install",
-      type: "App",
-      screenshots: [
-          "assets/screenshots/ithunder.png"
-      ],
-      badge: ""
   },
   {
       id: "eclipse",
