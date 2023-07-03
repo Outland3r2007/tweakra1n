@@ -443,7 +443,7 @@ if(window.navigator&&window.navigator.standalone){var preloaderDialog=app.dialog
                 </li>
               </ul>
               <p>
-            <a href="javascript:hs()" class="button button-raised button-fill">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div> 
+            <a href="javascript:hs()" class="button button-raised button-fill tr">Use in web</a>                                                                </center>                                                            </div>                                                        </div>                                                    </div>                                                </div>                                            </div> 
 `;
 
 
@@ -832,4 +832,16 @@ appSubmitForm.addEventListener('submit', function (e) {
   app.popup.close('#appsubmit');
   
    app.dialog.alert('We will review your app soon.', 'Thank you!');
+});
+document.addEventListener('DOMContentLoaded', function() {
+  var buttons = document.querySelectorAll('.tr');
+
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      button.classList.add('clicked');
+      setTimeout(function() {
+        button.classList.remove('clicked');
+      }, 200);
+    });
+  });
 });
