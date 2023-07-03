@@ -18,8 +18,17 @@
   --f7-theme-color-shade: var(--f7-ios-primary-shade);
   --f7-theme-color-tint: var(--f7-ios-primary-tint);
 }
+.tr.clicked {
+  animation: click 0.2s linear;
+}
+
+@keyframes click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.50); }
+  100% { transform: scale(1); }
+}
 .signeddot{
-background-color:#64C466;
+background-color:red;
 /*Signed: #64C466*/
 /*Revoked: red*/
 float:right;
